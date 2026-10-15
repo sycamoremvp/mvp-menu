@@ -1,0 +1,112 @@
+name: Sync drinks from Sippo
+
+# Runs daily at 11am Central. GitHub schedules use UTC and don't follow daylight
+# saving time, so there are two schedules and each one only runs in its half of the year.
+# "Run workflow" on the Actions tab runs it immediately (for late Sippo edits).
+on:
+  schedule:
+    - cron: '0 16 * * *' # 11am Central Daylight Time
+    - cron: '0 17 * * *' # 11am Central Standard Time
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: write
+
+concurrency:
+  group: sippo-sync
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pick the schedule that matches daylight saving time
+        id: clock
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          offset=$(TZ=America/Chicago date +%z)
+          skip=false
+          if [ "$SCHEDULE" = "0 16 * * *" ] && [ "$offset" != "-0500" ]; then skip=true; fi
+          if [ "$SCHEDULE" = "0 17 * * *" ] && [ "$offset" != "-0600" ]; then skip=true; fi
+          echo "skip=$skip" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.clock.outputs.skip == 'false'
+
+      - uses: actions/setup-node@v4
+        if: steps.clock.outputs.skip == 'false'
+        with:
+          node-version: 22
+
+      - name: Import drinks from Sippo
+        id: import
+        if: steps.clock.outputs.skip == 'false'
+        run: |
+          set +e
+          node scripts/import-sippo.mjs --summary "$RUNNER_TEMP/summary.md"
+          code=$?
+          set -e
+          if [ "$code" = "1" ]; then exit 1; fi
+          echo "needs_review=$([ "$code" = "2" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "changed=$([ -n "$(git status --porcelain drinks.json)" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Check the updated files
+        id: validate
+        if: steps.import.outputs.changed == 'true'
+        run: |
+          set +e
+          node scripts/validate.mjs | tee "$RUNNER_TEMP/validate.txt"
+          echo "ok=$([ "${PIPESTATUS[0]}" = "0" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Submit the change, and merge it if everything checks out
+        if: steps.import.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NEEDS_REVIEW: ${{ steps.import.outputs.needs_review }}
+          VALID: ${{ steps.validate.outputs.ok }}
+        run: |
+          branch="sippo-sync-$(TZ=America/Chicago date +%Y-%m-%d-%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -am "Sync drinks from Sippo"
+          git push -u origin "$branch"
+
+          {
+            cat "$RUNNER_TEMP/summary.md"
+            echo
+            if [ "$VALID" != "true" ]; then
+              echo "**The automatic check found problems, so this was not merged:**"
+              echo '```'
+              cat "$RUNNER_TEMP/validate.txt"
+              echo '```'
+            elif [ "$NEEDS_REVIEW" = "true" ]; then
+              echo "Not merged automatically. Check Sippo, then click **Merge pull request** if this looks right."
+            else
+              echo "Merged automatically after passing the check."
+            fi
+          } > "$RUNNER_TEMP/body.md"
+
+          gh pr create --base main --head "$branch" \
+            --title "Sync drinks from Sippo ($(TZ=America/Chicago date '+%b %-d'))" \
+            --body-file "$RUNNER_TEMP/body.md"
+
+          if [ "$VALID" != "true" ] || [ "$NEEDS_REVIEW" = "true" ]; then
+            echo "::error::Drink sync needs review. See the open pull request."
+            exit 1
+          fi
+
+          # Changes pushed by this workflow don't start the regular check, so report
+          # the result of the check that just ran here.
+          gh api "repos/$GITHUB_REPOSITORY/check-runs" \
+            -f name=validate -f head_sha="$(git rev-parse HEAD)" \
+            -f status=completed -f conclusion=success >/dev/null
+          # GitHub can take a few seconds to register the check, so retry briefly.
+          for attempt in 1 2 3 4 5 6; do
+            if gh pr merge "$branch" --squash --delete-branch; then exit 0; fi
+            sleep 10
+          done
+          echo "::error::Couldn't merge the drink sync. See the open pull request."
+          exit 1

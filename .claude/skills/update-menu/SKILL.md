@@ -17,7 +17,7 @@ If any of these is obvious from Chris's message, don't ask again.
 
 ## 2. Read the source carefully
 
-- For drinks, the source may be the Sippo page (https://app.sippo.io/m/8xPbVv). Its page text contains every drink; read it directly rather than from screenshots.
+- **Drinks come from Sippo.** For "update the drinks from Sippo," run `node scripts/import-sippo.mjs` (in a Claude cloud session, prefix it with `NODE_USE_ENV_PROXY=1`), then follow steps 3 to 5 using the change list it prints. Don't hand-edit Sippo drinks in `drinks.json`. Soft drinks and Sippo name fixes live in the settings at the top of the import script.
 
 - Read every page of the PDF or image. Capture section titles, subtitles, notes, item names, descriptions, prices, sizes, and add-ons.
 - Keep the restaurant's wording and punctuation as printed. Don't "fix" style.
