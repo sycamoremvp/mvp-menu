@@ -1,4 +1,4 @@
-// Checks menu.json, drinks.json, and hours.json for mistakes before they reach the app.
+// Checks menu.json, seasonal.json, drinks.json, and hours.json for mistakes before they reach the app.
 // Run with: node scripts/validate.mjs
 // Uses only built-in Node features so there is nothing to install.
 
@@ -6,6 +6,8 @@ import { readFileSync } from 'node:fs';
 
 const MENU_FILES = [
   { path: 'menu.json', allowEmpty: false },
+  // Seasonal may be empty between seasonal menus.
+  { path: 'seasonal.json', allowEmpty: true },
   // Drinks may be empty until the first drink list is added.
   { path: 'drinks.json', allowEmpty: true },
 ];
@@ -179,7 +181,7 @@ function checkMenuFile({ path, allowEmpty }) {
 }
 
 const HOURS_FIELDS = ['schemaVersion', 'seasonName', 'updated', 'timeZone', 'areas'];
-const AREA_FIELDS = ['id', 'name', 'note', 'hours'];
+const AREA_FIELDS = ['id', 'name', 'season', 'note', 'hours'];
 const SLOT_FIELDS = ['days', 'open', 'close', 'label'];
 const DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
@@ -215,6 +217,15 @@ function checkHoursFile(path) {
     checkFields(area, AREA_FIELDS, at, errors);
     checkText(area.name, at, 'name', errors, { required: true });
     checkText(area.note, at, 'note', errors, { required: false });
+    if (area.season !== undefined) {
+      const { start, end, ...extra } = area.season ?? {};
+      const isDate = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v));
+      if (Object.keys(extra).length > 0 || !isDate(start) || !isDate(end)) {
+        errors.push(`${at}: "season" must be like { "start": "2026-05-25", "end": "2026-10-31" }.`);
+      } else if (start > end) {
+        errors.push(`${at}: season starts (${start}) after it ends (${end}).`);
+      }
+    }
     if (typeof area.id !== 'string' || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(area.id)) {
       errors.push(`${at}: "id" must be lowercase letters, numbers, and dashes, like "rooftop".`);
     } else if (seenIds.has(area.id)) {

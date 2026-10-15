@@ -19,7 +19,8 @@ The app downloads these files when it opens, so menu changes go live without a n
 
 ## Files
 
-- `menu.json`: the food menu.
+- `menu.json`: the regular food menu.
+- `seasonal.json`: the seasonal features menu (changes up to 4 times a year). Shown as its own menu in the app. Replaced wholesale each season; can be empty between seasons.
 - `drinks.json`: the drink list (beverages are never sold online; this is display only).
 - `hours.json`: opening hours for each area (Sports Bar & Patio, Rooftop). Hours are seasonal.
 - `scripts/validate.mjs`: the automatic check. Run `node scripts/validate.mjs` before every pull request.
@@ -67,7 +68,6 @@ The POS (Shift4 / SkyTab) is the source of truth for items and prices. These fil
 
 - Each item has either `price` or `sizes`, never both. `sizes` covers any choice that changes the price (sizes, proteins, basket vs side).
 - A price of `0` means "included" (for example, a side that comes with a meal).
-- The seasonal menu lives in the `seasonal-features` section. On a seasonal change, replace its title and items but keep its id.
 - Comments above are explanation only; real JSON files can't contain comments.
 
 ## Hours format (hours.json)
@@ -82,7 +82,8 @@ The POS (Shift4 / SkyTab) is the source of truth for items and prices. These fil
     {
       "id": "rooftop",                          // never changes once set
       "name": "Rooftop Bar",
-      "note": "Closed for the season",          // optional
+      "season": { "start": "2026-05-25", "end": "2026-10-31" },  // optional; outside these dates the area shows as closed for the season
+      "note": "Closed on inclement weather days",  // optional
       "hours": [
         { "days": ["mon", "tue"], "open": "16:00", "close": "00:00" },  // 24-hour times; close is optional
         { "days": ["fri", "sat", "sun"], "label": "Open all day" }       // label when there's no set time
@@ -93,6 +94,7 @@ The POS (Shift4 / SkyTab) is the source of truth for items and prices. These fil
 ```
 
 - Days not listed are closed. Each day appears at most once per area.
+- The rooftop's `season` dates need updating each spring (Memorial Day moves every year).
 - A closing time earlier than the opening time means after midnight (for example, open 11:00, close 02:00).
 
 ## Rules that protect the live app

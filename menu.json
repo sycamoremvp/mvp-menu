@@ -1,86 +1,8 @@
 {
   "schemaVersion": 1,
-  "menuName": "Fall & Winter 2026",
+  "menuName": "2026 Menu",
   "updated": "2026-10-15",
   "sections": [
-    {
-      "id": "seasonal-features",
-      "title": "Fall / Winter Features",
-      "shortTitle": "Seasonal",
-      "items": [
-        {
-          "group": "Appetizers",
-          "name": "Stuffing Sticks",
-          "price": 9,
-          "description": "Four Large Home-made Cornbread Sticks, Deep Fried, Served With Cranberry Aioli",
-          "new": true
-        },
-        {
-          "group": "Appetizers",
-          "name": "Fried Calamari",
-          "price": 14,
-          "description": "Breaded In House Calamari & Home-made Marinara"
-        },
-        {
-          "group": "Appetizers",
-          "name": "Soup of the Day",
-          "price": 6,
-          "description": "A Bowl Of Our Made Fresh Daily Soup w/Garlic Toast"
-        },
-        {
-          "group": "Salad",
-          "name": "Harvest Cobb Turkey Salad",
-          "price": 15,
-          "description": "Mixed Greens, Roasted Turkey, Cranberries, Pralines, Fresh Apples, Bleu Cheese Crumbles, Cornbread Croutons & Apple Vinaigrette",
-          "new": true
-        },
-        {
-          "group": "Flatbread",
-          "name": "Pepperoni Flatbread",
-          "price": 15,
-          "description": "Fresh Mozzarella Cheese, Marinara & Pepperoni"
-        },
-        {
-          "group": "Entrees",
-          "name": "Breaded Steak Tenderloin Sandwich",
-          "price": 18,
-          "description": "Hand Breaded Steak Tenderloin, Roasted Peppers & Onions, Fresh Mozzarella, Giardiniera Mayo, French Roll | Choice Of Side",
-          "new": true
-        },
-        {
-          "group": "Entrees",
-          "name": "Birria Mac & Cheese",
-          "price": 15,
-          "description": "Trottole Pasta, Hatch Chili Cheese, House Made Birria, Red Onion & Homemade Salsa Verde",
-          "new": true
-        },
-        {
-          "group": "Entrees",
-          "name": "Open Faced Turkey Sandwich",
-          "price": 14,
-          "description": "Griddled Texas Toast, Garlic Aioli, Cranberry Mayo, Slow Roasted Turkey, Gravy, Cornbread Stuffing, Onion Tanglers, Cranberries",
-          "new": true
-        },
-        {
-          "group": "Desserts",
-          "name": "Apple Cinnamon Bread A La Mode",
-          "price": 10,
-          "description": "Fresh, Warm Elleson’s Cinnamon Bread Topped With Apple Compote & Ollie’s Vanilla Custard"
-        },
-        {
-          "group": "Desserts",
-          "name": "Brown Butter Cake",
-          "price": 10,
-          "description": "Warm, Gooey Brown Butter Cake With Dulce De Leche Topping, Sugared Pralines & Ollie’s Vanilla Custard"
-        },
-        {
-          "group": "Desserts",
-          "name": "Deep Fried Brownie - Big Enough to Share!",
-          "price": 15,
-          "description": "Sweet Battered Chocolate Brownie, Deep Fried Golden Brown, Chocolate Sauce, Whipped Cream & Ollie’s Frozen Custard"
-        }
-      ]
-    },
     {
       "id": "warmups",
       "title": "Warmups",
@@ -90,16 +12,25 @@
           "price": 6,
           "description": "Home-made Tortilla Chips, House Fire Roasted Salsa",
           "addOns": [
-            { "name": "Guacamole", "price": 3 },
-            { "name": "Hatch Chili Queso | Beer Cheese", "price": 2 }
+            {
+              "name": "Guacamole",
+              "price": 3
+            },
+            {
+              "name": "Hatch Chili Queso | Beer Cheese",
+              "price": 2
+            }
           ]
         },
         {
           "name": "Beer Nuggets",
           "price": 10,
-          "description": "Fried Pizza Dough, Marinara. Choice of Style | Classic or Parmesean",
+          "description": "Fried Pizza Dough, Marinara. Choice of Style | Classic or Parmesan",
           "addOns": [
-            { "name": "Hatch Chili Queso | Beer Cheese", "price": 2 }
+            {
+              "name": "Hatch Chili Queso | Beer Cheese",
+              "price": 2
+            }
           ]
         },
         {
@@ -133,8 +64,14 @@
           "price": 12,
           "description": "Tater Tots, Beer Battered Fries or Chips. Lettuce, Tomato, Onion, Jalapeños, Salsa, Shredded Cheddar, Sour Cream, Beer Cheese",
           "addOns": [
-            { "name": "Avocado", "price": 1.5 },
-            { "name": "Carnitas, Chicken, or Steak", "price": 3.5 }
+            {
+              "name": "Avocado",
+              "price": 1.5
+            },
+            {
+              "name": "Carnitas, Chicken, or Steak",
+              "price": 3.5
+            }
           ]
         }
       ]
@@ -150,8 +87,14 @@
           "price": 12,
           "description": "8oz Angus Brisket Burger, Grilled or Crispy Chicken Breast, Impossible Burger Vegan Patty, Grilled Shrimp (Wraps only)",
           "addOns": [
-            { "name": "Impossible Burger Vegan Patty", "price": 2 },
-            { "name": "Grilled Shrimp (Wraps only)", "price": 1 }
+            {
+              "name": "Impossible Burger Vegan Patty",
+              "price": 2
+            },
+            {
+              "name": "Grilled Shrimp (Wraps only)",
+              "price": 1
+            }
           ]
         },
         {
@@ -167,9 +110,18 @@
         {
           "name": "Extra Infielders",
           "sizes": [
-            { "name": "Grilled Mushrooms, Grilled Onions, Onion Crisps, Pickled Jalapeños, Fresh Jalapeños, Salsa", "price": 1 },
-            { "name": "American, Cheddar, Pepperjack, Eurocream, Mozzerella, Swiss, Bleu, Avocado", "price": 1.5 },
-            { "name": "Carnitas, Ham, Soft Fried Egg, Bacon, Guacamole", "price": 3 }
+            {
+              "name": "Grilled Mushrooms, Grilled Onions, Onion Crisps, Pickled Jalapeños, Fresh Jalapeños, Salsa",
+              "price": 1
+            },
+            {
+              "name": "American, Cheddar, Pepperjack, Eurocream, Mozzarella, Swiss, Bleu, Avocado",
+              "price": 1.5
+            },
+            {
+              "name": "Carnitas, Ham, Soft Fried Egg, Bacon, Guacamole",
+              "price": 3
+            }
           ]
         }
       ]
@@ -232,7 +184,7 @@
           "group": "The Wraps",
           "name": "Chx Bacon Ranch Wrap",
           "price": 15,
-          "description": "Chicken, Bacon, Mix Greens, Tomato, Red Onion, Shredded Cheddar, Ranch"
+          "description": "Chicken, Bacon, Mixed Greens, Tomato, Red Onion, Shredded Cheddar, Ranch"
         },
         {
           "group": "The Wraps",
@@ -248,9 +200,18 @@
       "subtitle": "Large, hand breaded, made to order",
       "note": "Served in multiples of 6 only w/Celery & Ranch | Bleu Cheese. Sauces: Buffalo, Kansas City BBQ, Soy Sweet Chili, Honey Sriracha, Parmesan Garlic. Rubs: Creole, Lemon Pepper, Nashville Hot",
       "items": [
-        { "name": "Traditional", "price": 10 },
-        { "name": "Boneless", "price": 9 },
-        { "name": "Extra Celery, Sauces, Rubs, Dips", "price": 1 }
+        {
+          "name": "Traditional",
+          "price": 10
+        },
+        {
+          "name": "Boneless",
+          "price": 9
+        },
+        {
+          "name": "Extra Celery, Sauces, Rubs, Dips",
+          "price": 1
+        }
       ]
     },
     {
@@ -274,8 +235,14 @@
           "price": 12,
           "description": "Mozzarella, American, Garlic Aioli, Eurocream, Texas Toast",
           "addOns": [
-            { "name": "Soft Fried Egg", "price": 3 },
-            { "name": "Bacon", "price": 3 }
+            {
+              "name": "Soft Fried Egg",
+              "price": 3
+            },
+            {
+              "name": "Bacon",
+              "price": 3
+            }
           ]
         },
         {
@@ -283,9 +250,18 @@
           "price": 12,
           "description": "Bacon, Lettuce, Tomato, Creole Mayo, Texas Toast",
           "addOns": [
-            { "name": "Avocado", "price": 1.5 },
-            { "name": "Soft Fried Egg", "price": 3 },
-            { "name": "Extra Bacon", "price": 3 }
+            {
+              "name": "Avocado",
+              "price": 1.5
+            },
+            {
+              "name": "Soft Fried Egg",
+              "price": 3
+            },
+            {
+              "name": "Extra Bacon",
+              "price": 3
+            }
           ]
         },
         {
@@ -323,56 +299,111 @@
         {
           "name": "Beer Battered Fries",
           "sizes": [
-            { "name": "With your meal", "price": 0 },
-            { "name": "As a basket", "price": 5 }
+            {
+              "name": "With your meal",
+              "price": 0
+            },
+            {
+              "name": "As a basket",
+              "price": 5
+            }
           ]
         },
         {
           "name": "Tater Tots",
           "sizes": [
-            { "name": "With your meal", "price": 0 },
-            { "name": "As a basket", "price": 5 }
+            {
+              "name": "With your meal",
+              "price": 0
+            },
+            {
+              "name": "As a basket",
+              "price": 5
+            }
           ]
         },
         {
           "name": "Garlic Parmesan Tots",
           "sizes": [
-            { "name": "With your meal", "price": 0 },
-            { "name": "As a basket", "price": 5 }
+            {
+              "name": "With your meal",
+              "price": 0
+            },
+            {
+              "name": "As a basket",
+              "price": 5
+            }
           ]
         },
         {
           "name": "Cajun Potato Salad",
           "sizes": [
-            { "name": "With your meal", "price": 0 },
-            { "name": "As a basket", "price": 5 }
+            {
+              "name": "With your meal",
+              "price": 0
+            },
+            {
+              "name": "As a basket",
+              "price": 5
+            }
           ]
         },
         {
           "name": "Tortilla Chips",
-          "sizes": [{ "name": "With your meal", "price": 0 }]
+          "sizes": [
+            {
+              "name": "With your meal",
+              "price": 0
+            }
+          ]
         },
         {
           "name": "Celery",
-          "sizes": [{ "name": "With your meal", "price": 0 }]
+          "sizes": [
+            {
+              "name": "With your meal",
+              "price": 0
+            }
+          ]
         },
         {
           "name": "Rice & Beans",
-          "sizes": [{ "name": "Upgrade with your meal", "price": 2 }]
+          "sizes": [
+            {
+              "name": "Upgrade with your meal",
+              "price": 2
+            }
+          ]
         },
         {
           "name": "Onion Rings",
-          "sizes": [{ "name": "Upgrade with your meal", "price": 4 }]
+          "sizes": [
+            {
+              "name": "Upgrade with your meal",
+              "price": 4
+            }
+          ]
         },
         {
           "name": "Cheese Curds",
-          "sizes": [{ "name": "Upgrade with your meal", "price": 4 }]
+          "sizes": [
+            {
+              "name": "Upgrade with your meal",
+              "price": 4
+            }
+          ]
         },
         {
           "name": "Side Salad",
           "sizes": [
-            { "name": "Upgrade with your meal", "price": 1 },
-            { "name": "As a basket", "price": 5 }
+            {
+              "name": "Upgrade with your meal",
+              "price": 1
+            },
+            {
+              "name": "As a basket",
+              "price": 5
+            }
           ]
         }
       ]
@@ -387,8 +418,14 @@
           "price": 11,
           "description": "Mixed Greens, Cucumber, Tomato, Onion, Green Pepper, Cheddar, Crouton",
           "addOns": [
-            { "name": "Chicken", "price": 4 },
-            { "name": "Shrimp or Steak", "price": 5 }
+            {
+              "name": "Chicken",
+              "price": 4
+            },
+            {
+              "name": "Shrimp or Steak",
+              "price": 5
+            }
           ]
         },
         {
@@ -396,8 +433,14 @@
           "price": 12,
           "description": "Tortilla Bowl, Refried Beans, Rice, Lettuce, Tomato, Red Onion, Cheddar",
           "addOns": [
-            { "name": "Chicken", "price": 4 },
-            { "name": "Shrimp or Steak", "price": 5 }
+            {
+              "name": "Chicken",
+              "price": 4
+            },
+            {
+              "name": "Shrimp or Steak",
+              "price": 5
+            }
           ]
         },
         {
@@ -406,8 +449,14 @@
           "description": "Mixed Greens, Bacon, Strawberry, Bleu Cheese Crumbles, Avocado, Blueberry, Bourbon Candied Pecans",
           "featured": true,
           "addOns": [
-            { "name": "Chicken", "price": 4 },
-            { "name": "Shrimp or Steak", "price": 5 }
+            {
+              "name": "Chicken",
+              "price": 4
+            },
+            {
+              "name": "Shrimp or Steak",
+              "price": 5
+            }
           ]
         }
       ]
@@ -421,11 +470,20 @@
           "name": "MVP Burrito",
           "description": "Rice, Beans, Lettuce, Tomato, Onion, Mozzarella, Flour Wrap, Side Salsa",
           "sizes": [
-            { "name": "Carnitas or Chicken", "price": 12 },
-            { "name": "Steak or Shrimp", "price": 14 }
+            {
+              "name": "Carnitas or Chicken",
+              "price": 12
+            },
+            {
+              "name": "Steak or Shrimp",
+              "price": 14
+            }
           ],
           "addOns": [
-            { "name": "Guacamole", "price": 3 }
+            {
+              "name": "Guacamole",
+              "price": 3
+            }
           ]
         },
         {
@@ -433,21 +491,42 @@
           "price": 11,
           "description": "House Blend of Cheese, Lettuce, Tomato, Grilled Peppers & Onions, Salsa, Sour Cream, Flour Tortilla",
           "addOns": [
-            { "name": "Carnitas or Chicken", "price": 3 },
-            { "name": "Steak", "price": 4 }
+            {
+              "name": "Carnitas or Chicken",
+              "price": 3
+            },
+            {
+              "name": "Steak",
+              "price": 4
+            }
           ]
         },
         {
           "name": "3 Tacos",
           "description": "Mexican style: Cilantro, Red Onion, Cheese. American style: Lettuce, Tomato, Cheese. Tortilla: Flour or Corn",
           "sizes": [
-            { "name": "Carnitas or Chicken", "price": 10 },
-            { "name": "Steak or Shrimp", "price": 11 },
-            { "name": "Grilled Or Battered Cod", "price": 11 }
+            {
+              "name": "Carnitas or Chicken",
+              "price": 10
+            },
+            {
+              "name": "Steak or Shrimp",
+              "price": 11
+            },
+            {
+              "name": "Grilled Or Battered Cod",
+              "price": 11
+            }
           ],
           "addOns": [
-            { "name": "Guacamole", "price": 3 },
-            { "name": "Rice & Beans", "price": 2 }
+            {
+              "name": "Guacamole",
+              "price": 3
+            },
+            {
+              "name": "Rice & Beans",
+              "price": 2
+            }
           ]
         }
       ]
@@ -457,14 +536,27 @@
       "title": "Little Leaguers",
       "subtitle": "Choice of side & kids drink",
       "items": [
-        { "name": "Hand Battered Chicken Tenders", "price": 7 },
-        { "name": "¼ Pound Burger or Cheese burger", "price": 7 },
-        { "name": "Cheese Quesadilla", "price": 7 },
-        { "name": "¼ Pound Game Day Hot Dog", "price": 7 }
+        {
+          "name": "Hand Battered Chicken Tenders",
+          "price": 7
+        },
+        {
+          "name": "¼ Pound Burger or Cheese burger",
+          "price": 7
+        },
+        {
+          "name": "Cheese Quesadilla",
+          "price": 7
+        },
+        {
+          "name": "¼ Pound Game Day Hot Dog",
+          "price": 7
+        }
       ]
     }
   ],
   "footnotes": [
+    "Join our Loyalty Program Today, Earn Rewards Every Visit",
     "Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.",
     "Large groups of 6 or more will have automatic gratuity of 20%."
   ]

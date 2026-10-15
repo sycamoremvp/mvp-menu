@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "menuName": "Fall / Winter Features",
+  "updated": "2026-10-15",
+  "sections": [
+    {
+      "id": "appetizers",
+      "title": "Appetizers",
+      "items": [
+        {
+          "name": "Stuffing Sticks",
+          "price": 9,
+          "description": "Four Large Home-made Cornbread Sticks, Deep Fried, Served With Cranberry Aioli",
+          "new": true
+        },
+        {
+          "name": "Fried Calamari",
+          "price": 14,
+          "description": "Breaded In House Calamari & Home-made Marinara"
+        },
+        {
+          "name": "Soup of the Day",
+          "price": 6,
+          "description": "A Bowl Of Our Made Fresh Daily Soup w/Garlic Toast"
+        }
+      ]
+    },
+    {
+      "id": "salad",
+      "title": "Salad",
+      "items": [
+        {
+          "name": "Harvest Cobb Turkey Salad",
+          "price": 15,
+          "description": "Mixed Greens, Roasted Turkey, Cranberries, Pralines, Fresh Apples, Bleu Cheese Crumbles, Cornbread Croutons & Apple Vinaigrette",
+          "new": true
+        }
+      ]
+    },
+    {
+      "id": "flatbread",
+      "title": "Flatbread",
+      "items": [
+        {
+          "name": "Pepperoni Flatbread",
+          "price": 15,
+          "description": "Fresh Mozzarella Cheese, Marinara & Pepperoni"
+        }
+      ]
+    },
+    {
+      "id": "entrees",
+      "title": "Entrees",
+      "items": [
+        {
+          "name": "Breaded Steak Tenderloin Sandwich",
+          "price": 18,
+          "description": "Hand Breaded Steak Tenderloin, Roasted Peppers & Onions, Fresh Mozzarella, Giardiniera Mayo, French Roll | Choice Of Side",
+          "new": true
+        },
+        {
+          "name": "Birria Mac & Cheese",
+          "price": 15,
+          "description": "Trottole Pasta, Hatch Chili Cheese, House Made Birria, Red Onion & Homemade Salsa Verde",
+          "new": true
+        },
+        {
+          "name": "Open Faced Turkey Sandwich",
+          "price": 14,
+          "description": "Griddled Texas Toast, Garlic Aioli, Cranberry Mayo, Slow Roasted Turkey, Gravy, Cornbread Stuffing, Onion Tanglers, Cranberries",
+          "new": true
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "title": "Desserts",
+      "items": [
+        {
+          "name": "Apple Cinnamon Bread A La Mode",
+          "price": 10,
+          "description": "Fresh, Warm Elleson’s Cinnamon Bread Topped With Apple Compote & Ollie’s Vanilla Custard"
+        },
+        {
+          "name": "Brown Butter Cake",
+          "price": 10,
+          "description": "Warm, Gooey Brown Butter Cake With Dulce De Leche Topping, Sugared Pralines & Ollie’s Vanilla Custard"
+        },
+        {
+          "name": "Deep Fried Brownie - Big Enough to Share!",
+          "price": 15,
+          "description": "Sweet Battered Chocolate Brownie, Deep Fried Golden Brown, Chocolate Sauce, Whipped Cream & Ollie’s Frozen Custard"
+        }
+      ]
+    }
+  ]
+}
