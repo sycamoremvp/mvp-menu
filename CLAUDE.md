@@ -17,6 +17,10 @@ The app downloads these files when it opens, so menu changes go live without a n
 3. Be honest about results. If something couldn't be read from a PDF, say so; never guess a price.
 4. Writing style: US English, no em dashes.
 
+## Blocked websites
+
+This cloud workspace can only reach approved websites. If a site you need is blocked (for example Sippo or a documentation site), don't work around it. Ask Chris to add the exact domain under the environment's **Allowed domains**, wait for him to confirm, then continue.
+
 ## Files
 
 - `menu.json`: the regular food menu.
