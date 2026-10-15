@@ -32,10 +32,10 @@ jobs:
           if [ "$SCHEDULE" = "0 17 * * *" ] && [ "$offset" != "-0600" ]; then skip=true; fi
           echo "skip=$skip" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         if: steps.clock.outputs.skip == 'false'
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         if: steps.clock.outputs.skip == 'false'
         with:
           node-version: 22
