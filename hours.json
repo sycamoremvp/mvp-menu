@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "seasonName": "Fall & Winter 2026",
+  "updated": "2026-10-15",
+  "timeZone": "America/Chicago",
+  "areas": [
+    {
+      "id": "sports-bar",
+      "name": "Sports Bar & Patio",
+      "hours": [
+        { "days": ["sun"], "open": "11:00", "close": "21:00" },
+        { "days": ["mon", "tue", "wed", "thu"], "open": "11:00", "close": "00:00" },
+        { "days": ["fri", "sat"], "open": "11:00", "close": "02:00" }
+      ]
+    },
+    {
+      "id": "rooftop",
+      "name": "Rooftop Bar",
+      "hours": [
+        { "days": ["mon", "tue", "wed", "thu"], "open": "16:00" },
+        { "days": ["fri", "sat", "sun"], "label": "Open all day" }
+      ]
+    }
+  ]
+}

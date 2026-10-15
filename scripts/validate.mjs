@@ -1,21 +1,22 @@
-// Checks menu.json and drinks.json for mistakes before they reach the app.
+// Checks menu.json, drinks.json, and hours.json for mistakes before they reach the app.
 // Run with: node scripts/validate.mjs
 // Uses only built-in Node features so there is nothing to install.
 
 import { readFileSync } from 'node:fs';
 
-const FILES = [
+const MENU_FILES = [
   { path: 'menu.json', allowEmpty: false },
   // Drinks may be empty until the first drink list is added.
   { path: 'drinks.json', allowEmpty: true },
 ];
+const HOURS_FILE = 'hours.json';
 
 const SCHEMA_VERSION = 1;
 const MAX_PRICE = 500;
 
-const FILE_FIELDS = ['schemaVersion', 'menuName', 'updated', 'sections'];
+const FILE_FIELDS = ['schemaVersion', 'menuName', 'updated', 'sections', 'footnotes'];
 const SECTION_FIELDS = ['id', 'title', 'shortTitle', 'subtitle', 'note', 'items'];
-const ITEM_FIELDS = ['name', 'price', 'sizes', 'description', 'details', 'featured', 'addOns'];
+const ITEM_FIELDS = ['group', 'name', 'price', 'sizes', 'description', 'details', 'featured', 'new', 'addOns'];
 const OPTION_FIELDS = ['name', 'price'];
 
 function checkFields(obj, allowed, where, errors) {
@@ -76,6 +77,7 @@ function checkItem(item, where, errors) {
   checkText(item.name, at, 'name', errors, { required: true });
   checkText(item.description, at, 'description', errors, { required: false });
   checkText(item.details, at, 'details', errors, { required: false });
+  checkText(item.group, at, 'group', errors, { required: false });
 
   const hasPrice = item.price !== undefined;
   const hasSizes = item.sizes !== undefined;
@@ -89,28 +91,46 @@ function checkItem(item, where, errors) {
     checkOptions(item.sizes, at, 'sizes', errors);
   }
 
-  if (item.featured !== undefined && typeof item.featured !== 'boolean') {
-    errors.push(`${at}: "featured" must be true or false (no quotes).`);
+  for (const flag of ['featured', 'new']) {
+    if (item[flag] !== undefined && typeof item[flag] !== 'boolean') {
+      errors.push(`${at}: "${flag}" must be true or false (no quotes).`);
+    }
   }
   if (item.addOns !== undefined) checkOptions(item.addOns, at, 'addOns', errors);
 }
 
-function checkFile({ path, allowEmpty }) {
-  const errors = [];
-  let data;
+function readJson(path, errors) {
   try {
-    data = JSON.parse(readFileSync(path, 'utf8'));
+    return JSON.parse(readFileSync(path, 'utf8'));
   } catch (err) {
-    return [`${path}: the file can't be read. Usually this is a missing comma, quote, or bracket. Details: ${err.message}`];
+    errors.push(`${path}: the file can't be read. Usually this is a missing comma, quote, or bracket. Details: ${err.message}`);
+    return null;
   }
+}
 
-  checkFields(data, FILE_FIELDS, path, errors);
+function checkCommon(data, path, errors) {
   if (data.schemaVersion !== SCHEMA_VERSION) {
     errors.push(`${path}: "schemaVersion" must be ${SCHEMA_VERSION}. Changing it requires an app update first.`);
   }
-  checkText(data.menuName, path, 'menuName', errors, { required: true });
   if (typeof data.updated !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(data.updated)) {
     errors.push(`${path}: "updated" must be a date like 2026-10-15.`);
+  }
+}
+
+function checkMenuFile({ path, allowEmpty }) {
+  const errors = [];
+  const data = readJson(path, errors);
+  if (!data) return errors;
+
+  checkFields(data, FILE_FIELDS, path, errors);
+  checkCommon(data, path, errors);
+  checkText(data.menuName, path, 'menuName', errors, { required: true });
+  if (data.footnotes !== undefined) {
+    if (!Array.isArray(data.footnotes)) {
+      errors.push(`${path}: "footnotes" must be a list of text.`);
+    } else {
+      data.footnotes.forEach((f, i) => checkText(f, path, `footnotes #${i + 1}`, errors, { required: true }));
+    }
   }
 
   if (!Array.isArray(data.sections)) {
@@ -158,15 +178,107 @@ function checkFile({ path, allowEmpty }) {
   return errors;
 }
 
-let failed = false;
-for (const file of FILES) {
-  const errors = checkFile(file);
-  if (errors.length === 0) {
-    console.log(`OK   ${file.path}`);
-  } else {
-    failed = true;
-    console.log(`FAIL ${file.path} (${errors.length} problem${errors.length === 1 ? '' : 's'})`);
-    for (const e of errors) console.log(`  - ${e}`);
+const HOURS_FIELDS = ['schemaVersion', 'seasonName', 'updated', 'timeZone', 'areas'];
+const AREA_FIELDS = ['id', 'name', 'note', 'hours'];
+const SLOT_FIELDS = ['days', 'open', 'close', 'label'];
+const DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+
+function checkTime(value, where, field, errors) {
+  if (typeof value !== 'string' || !/^([01]\d|2[0-3]):[0-5]\d$/.test(value)) {
+    errors.push(`${where}: "${field}" must be a 24-hour time like "11:00" or "21:30" (midnight is "00:00").`);
   }
 }
+
+function checkHoursFile(path) {
+  const errors = [];
+  const data = readJson(path, errors);
+  if (!data) return errors;
+
+  checkFields(data, HOURS_FIELDS, path, errors);
+  checkCommon(data, path, errors);
+  checkText(data.seasonName, path, 'seasonName', errors, { required: true });
+  if (data.timeZone !== 'America/Chicago') {
+    errors.push(`${path}: "timeZone" must be "America/Chicago".`);
+  }
+  if (!Array.isArray(data.areas) || data.areas.length === 0) {
+    errors.push(`${path}: "areas" must be a list with at least one area (like the Sports Bar).`);
+    return errors;
+  }
+
+  const seenIds = new Set();
+  data.areas.forEach((area, i) => {
+    if (typeof area !== 'object' || area === null) {
+      errors.push(`${path} > area #${i + 1}: must have an id, a name, and hours.`);
+      return;
+    }
+    const at = `${path} > ${area.name ?? `area #${i + 1}`}`;
+    checkFields(area, AREA_FIELDS, at, errors);
+    checkText(area.name, at, 'name', errors, { required: true });
+    checkText(area.note, at, 'note', errors, { required: false });
+    if (typeof area.id !== 'string' || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(area.id)) {
+      errors.push(`${at}: "id" must be lowercase letters, numbers, and dashes, like "rooftop".`);
+    } else if (seenIds.has(area.id)) {
+      errors.push(`${at}: id "${area.id}" is used by more than one area.`);
+    } else {
+      seenIds.add(area.id);
+    }
+
+    if (!Array.isArray(area.hours)) {
+      errors.push(`${at}: "hours" must be a list (it can be empty if the area is closed, with a "note" saying why).`);
+      return;
+    }
+    if (area.hours.length === 0 && area.note === undefined) {
+      errors.push(`${at}: has no hours. If it's closed for the season, add a "note" like "Closed for the season".`);
+    }
+    const seenDays = new Set();
+    area.hours.forEach((slot, j) => {
+      const sat = `${at} > hours #${j + 1}`;
+      if (typeof slot !== 'object' || slot === null) {
+        errors.push(`${sat}: must list days and an opening time or label.`);
+        return;
+      }
+      checkFields(slot, SLOT_FIELDS, sat, errors);
+      if (!Array.isArray(slot.days) || slot.days.length === 0) {
+        errors.push(`${sat}: "days" must be a list like ["mon", "tue"].`);
+      } else {
+        for (const d of slot.days) {
+          if (!DAYS.includes(d)) {
+            errors.push(`${sat}: "${d}" isn't a day. Use: ${DAYS.join(', ')}.`);
+          } else if (seenDays.has(d)) {
+            errors.push(`${sat}: "${d}" is listed more than once for ${area.name}.`);
+          } else {
+            seenDays.add(d);
+          }
+        }
+      }
+      if (slot.open === undefined && slot.label === undefined) {
+        errors.push(`${sat}: needs an "open" time or a "label" (like "Open all day").`);
+      }
+      if (slot.open !== undefined) checkTime(slot.open, sat, 'open', errors);
+      if (slot.close !== undefined) {
+        checkTime(slot.close, sat, 'close', errors);
+        if (slot.open === undefined) errors.push(`${sat}: has a "close" time but no "open" time.`);
+      }
+      checkText(slot.label, sat, 'label', errors, { required: false });
+    });
+  });
+
+  return errors;
+}
+
+function report(path, errors) {
+  if (errors.length === 0) {
+    console.log(`OK   ${path}`);
+    return true;
+  }
+  console.log(`FAIL ${path} (${errors.length} problem${errors.length === 1 ? '' : 's'})`);
+  for (const e of errors) console.log(`  - ${e}`);
+  return false;
+}
+
+let failed = false;
+for (const file of MENU_FILES) {
+  if (!report(file.path, checkMenuFile(file))) failed = true;
+}
+if (!report(HOURS_FILE, checkHoursFile(HOURS_FILE))) failed = true;
 process.exit(failed ? 1 : 0);

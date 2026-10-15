@@ -1,6 +1,6 @@
 ---
 name: update-menu
-description: Update menu.json or drinks.json from a menu PDF, photo, screenshot, or written instructions (for example, a seasonal menu change or a price update). Use whenever Chris hands over a menu file or asks to change menu items, prices, or drinks.
+description: Update menu.json, drinks.json, or hours.json from a menu PDF, photo, screenshot, or written instructions (for example, a seasonal menu change or a price update). Use whenever Chris hands over a menu file or asks to change menu items, prices, or drinks.
 ---
 
 # Update the menu
@@ -9,7 +9,7 @@ Follow these steps in order. Chris is not a programmer, so every question and su
 
 ## 1. Confirm what's being updated
 
-- Which file: food (`menu.json`), drinks (`drinks.json`), or both?
+- Which file: food (`menu.json`), drinks (`drinks.json`), hours (`hours.json`), or more than one?
 - Is this a full replacement (a new seasonal menu) or a small change (a few prices)?
 - What should `menuName` be (for example "Spring & Summer 2027")? Ask if the PDF doesn't say.
 
@@ -20,13 +20,15 @@ If any of these is obvious from Chris's message, don't ask again.
 - Read every page of the PDF or image. Capture section titles, subtitles, notes, item names, descriptions, prices, sizes, and add-ons.
 - Keep the restaurant's wording, capitalization, and punctuation as printed. Don't "fix" style.
 - **Never guess.** If a price or word is unreadable, cut off, or ambiguous, list it and ask Chris.
-- Things on a printed menu that aren't menu items (logos, addresses, hours, allergy disclaimers) don't go in the file. Mention any you skipped.
+- Customer notices like the raw-food advisory or the large-group gratuity go in `footnotes`. Other things that aren't menu items (logos, QR codes, social links, loyalty promos) don't go in the file. Mention anything you skipped.
 
 ## 3. Make the change
 
 - Start a new branch from the latest `main`, named like `menu-spring-2027` or `menu-price-update-2027-03`.
 - Edit the file to match the source exactly, following the format in CLAUDE.md.
 - Keep existing section `id`s for sections that still exist, even if their title changes. New sections get new ids.
+- A seasonal features menu replaces the items in the `seasonal-features` section (keep that id). Use `"new": true` for items marked NEW.
+- Write item names in Title Case even if the PDF prints them in all caps. Keep descriptions as printed.
 - Set `updated` to today's date.
 - Run `node scripts/validate.mjs` and fix anything it reports.
 

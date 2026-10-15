@@ -21,6 +21,7 @@ The app downloads these files when it opens, so menu changes go live without a n
 
 - `menu.json`: the food menu.
 - `drinks.json`: the drink list (beverages are never sold online; this is display only).
+- `hours.json`: opening hours for each area (Sports Bar & Patio, Rooftop). Hours are seasonal.
 - `scripts/validate.mjs`: the automatic check. Run `node scripts/validate.mjs` before every pull request.
 - `.claude/skills/update-menu/`: step-by-step process for updating the menu from a PDF, photo, or written instructions.
 
@@ -44,24 +45,55 @@ The POS (Shift4 / SkyTab) is the source of truth for items and prices. These fil
       "note": "Served with fries",       // optional, shown under the section
       "items": [
         {
+          "group": "The Sandwiches",       // optional subheading within the section
           "name": "The Boss",
           "price": 17,                     // plain number, no $ sign or quotes
           "description": "Choice of Protein, Bacon, ...",  // optional
           "details": "IPA · 6.5% ABV",     // optional short line, mainly for drinks
           "featured": true,                // optional, shows a "Fan Favorite" badge
+          "new": true,                     // optional, shows a "New" badge
           "addOns": [{ "name": "Guacamole", "price": 3 }]  // optional
         },
         {
-          "name": "Domestic Draft",
-          "sizes": [{ "name": "Pint", "price": 5 }, { "name": "Pitcher", "price": 14 }]
+          "name": "MVP Burrito",
+          "sizes": [{ "name": "Carnitas or Chicken", "price": 12 }, { "name": "Steak or Shrimp", "price": 14 }]
         }
+      ]
+    }
+  ],
+  "footnotes": ["Large groups of 6 or more will have automatic gratuity of 20%."]  // optional
+}
+```
+
+- Each item has either `price` or `sizes`, never both. `sizes` covers any choice that changes the price (sizes, proteins, basket vs side).
+- A price of `0` means "included" (for example, a side that comes with a meal).
+- The seasonal menu lives in the `seasonal-features` section. On a seasonal change, replace its title and items but keep its id.
+- Comments above are explanation only; real JSON files can't contain comments.
+
+## Hours format (hours.json)
+
+```json
+{
+  "schemaVersion": 1,
+  "seasonName": "Fall & Winter 2026",
+  "updated": "2026-10-15",
+  "timeZone": "America/Chicago",
+  "areas": [
+    {
+      "id": "rooftop",                          // never changes once set
+      "name": "Rooftop Bar",
+      "note": "Closed for the season",          // optional
+      "hours": [
+        { "days": ["mon", "tue"], "open": "16:00", "close": "00:00" },  // 24-hour times; close is optional
+        { "days": ["fri", "sat", "sun"], "label": "Open all day" }       // label when there's no set time
       ]
     }
   ]
 }
 ```
 
-Each item has either `price` or `sizes`, never both. (Comments above are explanation only; real JSON files can't contain comments.)
+- Days not listed are closed. Each day appears at most once per area.
+- A closing time earlier than the opening time means after midnight (for example, open 11:00, close 02:00).
 
 ## Rules that protect the live app
 
