@@ -5,11 +5,11 @@
 import { readFileSync } from 'node:fs';
 
 const MENU_FILES = [
-  { path: 'menu.json', allowEmpty: false },
+  { path: 'menu.json', allowEmpty: false, priceRequired: true },
   // Seasonal may be empty between seasonal menus.
-  { path: 'seasonal.json', allowEmpty: true },
-  // Drinks may be empty until the first drink list is added.
-  { path: 'drinks.json', allowEmpty: true },
+  { path: 'seasonal.json', allowEmpty: true, priceRequired: true },
+  // Drinks are display only, and most drinks don't list a price.
+  { path: 'drinks.json', allowEmpty: false, priceRequired: false },
 ];
 const HOURS_FILE = 'hours.json';
 
@@ -18,7 +18,7 @@ const MAX_PRICE = 500;
 
 const FILE_FIELDS = ['schemaVersion', 'menuName', 'updated', 'sections', 'footnotes'];
 const SECTION_FIELDS = ['id', 'title', 'shortTitle', 'subtitle', 'note', 'items'];
-const ITEM_FIELDS = ['group', 'name', 'price', 'sizes', 'description', 'details', 'featured', 'new', 'addOns'];
+const ITEM_FIELDS = ['group', 'name', 'price', 'sizes', 'options', 'description', 'details', 'featured', 'new', 'addOns'];
 const OPTION_FIELDS = ['name', 'price'];
 
 function checkFields(obj, allowed, where, errors) {
@@ -69,7 +69,7 @@ function checkOptions(list, where, field, errors) {
   });
 }
 
-function checkItem(item, where, errors) {
+function checkItem(item, where, errors, priceRequired) {
   if (typeof item !== 'object' || item === null) {
     errors.push(`${where}: each item must have at least a name and a price.`);
     return;
@@ -86,7 +86,7 @@ function checkItem(item, where, errors) {
   if (hasPrice && hasSizes) {
     errors.push(`${at}: has both "price" and "sizes". Use one or the other.`);
   } else if (!hasPrice && !hasSizes) {
-    errors.push(`${at}: needs a "price" (or "sizes" if it comes in more than one size).`);
+    if (priceRequired) errors.push(`${at}: needs a "price" (or "sizes" if it comes in more than one size).`);
   } else if (hasPrice) {
     checkPrice(item.price, at, errors);
   } else {
@@ -99,6 +99,13 @@ function checkItem(item, where, errors) {
     }
   }
   if (item.addOns !== undefined) checkOptions(item.addOns, at, 'addOns', errors);
+  if (item.options !== undefined) {
+    if (!Array.isArray(item.options) || item.options.length === 0) {
+      errors.push(`${at}: "options" must be a list of text, like ["Peach", "Lemon"].`);
+    } else {
+      item.options.forEach((o, i) => checkText(o, at, `options #${i + 1}`, errors, { required: true }));
+    }
+  }
 }
 
 function readJson(path, errors) {
@@ -119,7 +126,7 @@ function checkCommon(data, path, errors) {
   }
 }
 
-function checkMenuFile({ path, allowEmpty }) {
+function checkMenuFile({ path, allowEmpty, priceRequired }) {
   const errors = [];
   const data = readJson(path, errors);
   if (!data) return errors;
@@ -170,7 +177,7 @@ function checkMenuFile({ path, allowEmpty }) {
     }
     const seenNames = new Set();
     section.items.forEach((item) => {
-      checkItem(item, at, errors);
+      checkItem(item, at, errors, priceRequired);
       const key = typeof item?.name === 'string' ? item.name.trim().toLowerCase() : null;
       if (key && seenNames.has(key)) errors.push(`${at}: "${item.name}" appears more than once.`);
       if (key) seenNames.add(key);

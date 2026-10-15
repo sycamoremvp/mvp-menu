@@ -2,5 +2,1333 @@
   "schemaVersion": 1,
   "menuName": "Drinks",
   "updated": "2026-10-15",
-  "sections": []
+  "sections": [
+    {
+      "id": "new-and-limited-availability",
+      "title": "New & Limited Availability",
+      "subtitle": "New to MVP & Limited Availability Selections",
+      "items": [
+        {
+          "name": "Green Bay Tears",
+          "details": "Solemn Oath Brewery · American IPA · 6.5% ABV",
+          "description": "Solemn Oath's Green Bay Tears is now pouring at MVP. This tasty American IPA packs 6.5% ABV of hoppy rivalry fuel - crushable, refreshing, and gone before you know it. Order a pint and shed a happy tear.",
+          "options": [
+            "16oz"
+          ]
+        },
+        {
+          "name": "Good Boy",
+          "details": "Vodka Cocktail · 4.5% ABV",
+          "description": "Premium canned vodka cocktails made with real Good Boy Vodka, crisp seltzer, and natural fruit juices. Just 95 calories a can — and every pour helps a pup, since these good folks support dog rescue. Drink well, do good.",
+          "options": [
+            "Peach",
+            "Cranberry & Pineapple",
+            "Tropical Strawberry Hibiscus"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasonal-cocktails",
+      "title": "Seasonal Cocktails",
+      "subtitle": "Seasonal rotating cocktails crafted by the team at MVP!",
+      "items": [
+        {
+          "name": "Lexie's Autumn Refresher",
+          "description": "Bacardi rum, mint simple syrup, lime juice, and apple cider, topped with soda water."
+        },
+        {
+          "name": "Matt's Doc Holliday",
+          "description": "Blue Ice huckleberry vodka, huckleberry syrup, and lemon juice with a touch of simple syrup."
+        },
+        {
+          "name": "Makena's White Girl Russian",
+          "description": "Tito's vodka and Kahlua coffee liqueur with pumpkin spice syrup, topped with half and half."
+        },
+        {
+          "name": "Bridget's Can You \"Fig\" It?",
+          "description": "Smirnoff whipped cream vodka, fig and honey syrup, and lemon juice."
+        },
+        {
+          "name": "Ambyr's Candy Apple Old Fashioned",
+          "description": "Crown Royal apple and salted caramel whiskies with apple cider and Proof simple syrup."
+        },
+        {
+          "name": "Matt's Pumpkin Pie Martini",
+          "description": "Smirnoff whipped cream vodka, pumpkin pie liqueur, and half and half, topped with whipped cream and cinnamon."
+        }
+      ]
+    },
+    {
+      "id": "house-cocktails",
+      "title": "House Cocktails",
+      "subtitle": "Our available everyday favorite cocktails",
+      "items": [
+        {
+          "name": "Blood Orange Margarita",
+          "details": "Cocktail",
+          "description": "1800 Silver Tequila, Triple Sec, Blood Orange Syrup, Sour Mix & Lime Juice"
+        },
+        {
+          "name": "Window Seat to Amalfi",
+          "details": "Cocktail",
+          "description": "Windows Twist Gin, Limoncello, Simple Syrup & Lemon Juice"
+        },
+        {
+          "name": "MVP Old Fashioned",
+          "details": "Cocktail",
+          "description": "Woodford Reserve MVP Barrel Pick Bourbon, Proof Syrup, garnished with Luxardo Cherry & Orange Slice"
+        },
+        {
+          "name": "Gold Rush",
+          "details": "Cocktail",
+          "description": "Whiskey Acres Bourbon, Lemon Juice & Honey Simple Syrup"
+        },
+        {
+          "name": "Raspberry Lemon Mule",
+          "details": "Cocktail",
+          "description": "Smirnoff Raspberry Vodka, Ginger Beer & Lemon Juice"
+        },
+        {
+          "name": "Premium Long Island Iced Tea",
+          "details": "Cocktail",
+          "description": "Grey Goose Vodka, Bombay Sapphire Gin, Bacardi Rum, Casamigos Blanco Tequila, Triple Sec & Sour Mix with a Splash of Coke"
+        },
+        {
+          "name": "White Peach Sangria",
+          "details": "Cocktail",
+          "description": "Canyon Road Moscato, Peach Schnapps, Pineapple Juice & Sprite"
+        },
+        {
+          "name": "Pear Drop Martini",
+          "details": "Cocktail",
+          "description": "Grey Goose Pear Vodka, St. Germain Elderflower Liqueur, Simple Syrup & Lemon Juice"
+        },
+        {
+          "name": "Espresso Martini",
+          "details": "Cocktail",
+          "description": "Smirnoff Vanilla Vodka, Mr. Black Cold Brew Coffee Liqueur, Simple Syrup & Owen's Espresso Martini Mix"
+        },
+        {
+          "name": "Rooftop Rum Bucket",
+          "details": "Cocktail",
+          "description": "Fruit Rum Flavors (Passion Fruit, Raspberry, Coconut & Mango) with Orange, Pineapple & Cranberry Juices"
+        },
+        {
+          "name": "Chambord Bramble",
+          "details": "Cocktail",
+          "description": "Chambord Raspberry Liqueur, Bombay Sapphire Gin, Simple Syrup, Cranberry & Lemon Juice"
+        },
+        {
+          "name": "Red Berry Sangria",
+          "details": "Cocktail",
+          "description": "Canyon Road Cabernet Sauvignon, Blackberry Brandy, Triple Sec, Orange Juice & Sprite"
+        },
+        {
+          "name": "Chocolate Martini",
+          "details": "Cocktail",
+          "description": "Licor 43 Chocolate, Smirnoff Whipped Cream Vodka, Cream & Chocolate Syrup"
+        }
+      ]
+    },
+    {
+      "id": "draft-beer",
+      "title": "Draft Beer",
+      "subtitle": "Draft Beers Currently Available",
+      "items": [
+        {
+          "name": "Busch Light",
+          "details": "Anheuser-Busch · Light Lager · 4.1% ABV",
+          "description": "Busch Light is brewed longer to create a lighter body and fewer calories while always delivering that classic taste.",
+          "sizes": [
+            {
+              "name": "16oz",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "name": "Coors Light",
+          "details": "Molson Coors · Pilsner · 4.2% ABV",
+          "description": "Coors Light is a crisp, clean, American-style light lager with 4.2% ABV and 102 calories per 12 oz serving. Brewed by Molson Coors, it is famous for its \"World's Most Refreshing\" cold-lagered brewing process",
+          "sizes": [
+            {
+              "name": "16oz",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "name": "Miller Lite",
+          "details": "Molson Coors · Pilsner / Light Lager · 4.2% ABV",
+          "description": "Crafted as an American-style pilsner, it offers a light-to-medium body with a hop-forward flavor, subtle pale and crystal malt character, and a crisp, clean finish.",
+          "sizes": [
+            {
+              "name": "16oz",
+              "price": 4
+            }
+          ]
+        },
+        {
+          "name": "Modelo",
+          "details": "Pilsner-Style Lager · 4.4% ABV",
+          "description": "Modelo is a smooth, full-flavored lager with a crisp, clean finish that's easy to enjoy.",
+          "options": [
+            "16oz"
+          ]
+        },
+        {
+          "name": "Yuengling",
+          "details": "Amber Lager · 4.5% ABV",
+          "description": "America's oldest brewery's legendary amber lager. Rich caramel malt character, a smooth medium body, and a clean finish that goes down easy all game long.",
+          "options": [
+            "16oz"
+          ]
+        },
+        {
+          "name": "Blue Moon",
+          "details": "Witbier · 5.4% ABV",
+          "description": "Belgian-style wheat ale brewed with Valencia orange peel and coriander; smooth, citrusy, traditionally served with an orange slice.",
+          "options": [
+            "16oz"
+          ]
+        },
+        {
+          "name": "Michelob Ultra",
+          "details": "Michelob · Light Lager · 4.2% ABV",
+          "description": "Superior light lager, crisp and clean with light citrus aroma; 95 calories, 2.6g carbs.",
+          "options": [
+            "16oz"
+          ]
+        },
+        {
+          "name": "Founders Oktoberfest",
+          "details": "Founders Brewing Co. · Marzen · 6% ABV",
+          "description": "Traditional German Marzen brewed with imported German malts and hops; copper hue, rich malty and slightly sweet backbone, adheres to Reinheitsgebot.",
+          "options": [
+            "16oz"
+          ]
+        },
+        {
+          "name": "Kona Big Wave",
+          "details": "Kona Brewing · Golden Ale · 4.4% ABV",
+          "description": "Smooth, easy-drinking golden ale with tropical hop aroma (Galaxy, Citra); bright, refreshing finish.",
+          "options": [
+            "16oz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "craft-cans-and-bottles",
+      "title": "Craft Cans & Bottles",
+      "items": [
+        {
+          "name": "Space Dust",
+          "details": "Elysian Brewing · India Pale Ale · 8.2% ABV",
+          "description": "Elysian's flagship IPA — a bright, hoppy rocket ride loaded with citrus and tropical hop flavor. Bold, bitter, and built for IPA lovers.",
+          "options": [
+            "16oz Can"
+          ]
+        },
+        {
+          "name": "Zombie Dust",
+          "details": "Three Floyds Brewing · American Pale Ale · 6.5% ABV",
+          "description": "Three Floyds' legendary pale ale — intensely hopped with citrusy Citra hops for huge grapefruit-and-passionfruit aroma. A Midwest cult classic that lives up to the hype.",
+          "options": [
+            "16oz Can"
+          ]
+        },
+        {
+          "name": "Lil Sumpin Sumpin",
+          "details": "Lagunitas Brewing Company · American Pale Wheat Ale · 7.5% ABV",
+          "description": "Lagunitas' smooth-drinking wheat IPA — silky, citrusy, and loaded with hop flavor. A cult favorite that goes down way too easy on game day.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Two Hearted",
+          "details": "Bell's Brewery · American IPA · 7% ABV",
+          "description": "Bell's legendary IPA — bursting with grapefruit and pine from 100% Centennial hops. Perfectly balanced, endlessly drinkable, and a must-have for any hop lover on game day.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Dean Street",
+          "details": "Riverlands Brewing · IPA · 6.8% ABV",
+          "description": "Riverlands' Dean Street IPA out of St. Charles — hazy, juicy, and loaded with citrusy hop flavor. A local standout that drinks way too easy on game day.",
+          "options": [
+            "16oz Can"
+          ]
+        },
+        {
+          "name": "805",
+          "details": "Firestone Walker Brewing Company · Blonde Ale · 4.7% ABV",
+          "description": "Firestone Walker's 805 blonde ale — smooth, refreshing, and endlessly crushable. A California classic that goes down easy whether you're watching the game or just hanging out.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "805 Cerveza",
+          "details": "Firestone Walker Brewing Company · Mexican Lager · 4.5% ABV",
+          "description": "Firestone Walker's 805 Cerveza — a crisp Mexican-style lager with a touch of real lime. Light, refreshing, and built for sunny game days.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Gumballhead",
+          "details": "Three Floyds Brewing · American Wheat Ale · 5.6% ABV",
+          "description": "Three Floyds' Gumballhead — a bright, hoppy wheat ale bursting with grapefruit and citrus. Smooth, refreshing, and dangerously drinkable on game day.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Anti-Hero IPA",
+          "details": "Revolution Brewing · American IPA · 6.7% ABV",
+          "description": "Revolution's Anti-Hero — Chicago's flagship IPA, loaded with citrus and pine from five classic American hops. Bold, balanced, and built for game day.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Fist City",
+          "details": "Revolution Brewing · Chicago Pale Ale · 5.5% ABV",
+          "description": "Revolution's Fist City — a Chicago pale ale that flashes with citrusy hops. Crisp, easy-drinking, and built for long game days.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Hazy Hero",
+          "details": "Revolution Brewing · Hazy IPA · 7.3% ABV",
+          "description": "Revolution's Hazy Hero — a juicy, velvety hazy IPA bursting with tropical fruit flavor. Soft, smooth, and dangerously drinkable.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Jai Alai IPA",
+          "details": "Cigar City Brewing · American IPA · 7.5% ABV",
+          "description": "Cigar City's Jai Alai — a bold, citrusy IPA bursting with tangerine and tropical fruit. A Florida classic that drinks like a day at the ballpark.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Lagunitas IPA",
+          "details": "Lagunitas Brewing Company · American IPA · 6.2% ABV",
+          "description": "Lagunitas' flagship IPA — bold, hoppy, and endlessly drinkable. A West Coast classic that never misses.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Kayak Pils",
+          "details": "Riverlands Brewing · Pilsner · 4.8% ABV",
+          "description": "Riverlands' Kayak Pils — a crisp, clean pilsner that's as refreshing as a day on the river. Light, snappy, and perfect for easy drinking.",
+          "options": [
+            "16oz Can"
+          ]
+        },
+        {
+          "name": "312 Urban Wheat Ale",
+          "details": "Goose Island · American Wheat Ale · 4.2% ABV",
+          "description": "Chicago's own wheat ale — hazy, citrusy, and ridiculously refreshing. A Windy City staple.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Blue Moon Belgian White",
+          "details": "Blue Moon · Witbier · 5.4% ABV",
+          "description": "The orange-slice beer. Smooth Belgian-style white with citrus and spice — always a crowd-pleaser.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Big Wave",
+          "details": "Kona Brewing · Golden Ale · 4.4% ABV",
+          "description": "Liquid aloha. Light, tropical golden ale with a breezy hop kick — tastes like the beach.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Major",
+          "details": "Art History Brewing · Hazy IPA · 6.6% ABV",
+          "description": "A hazy IPA from our Geneva neighbors that's all juice, no bite. Dry-hopped with Loral for big tropical flavor and a smooth, pillowy finish. Old-school Northeast style, new-school drinkability.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Firefly Fields",
+          "details": "Riverlands Brewing · West Coast IPA · 6.5% ABV",
+          "description": "A modern West Coast IPA from our St. Charles neighbors, hopped with Citra, Mosaic, Nelson Sauvin, and New Zealand Cascade. Bright, piney, and citrus-loaded — like a summer night catching fireflies in a glass.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Kalamazoo Stout",
+          "details": "Bell's Brewery · Stout · 6% ABV",
+          "description": "Bell's hometown hero — a smooth, full-bodied American stout with roasted coffee and dark chocolate notes. Rich enough for winter, easy enough for every day.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Three Floyds Deluxe Lager",
+          "details": "Three Floyds · Lager · 4.5% ABV",
+          "description": "Crisp craft lager; clean, smooth and easy-drinking.",
+          "options": [
+            "12oz Can"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wine",
+      "title": "Wine",
+      "subtitle": "Available Wine Varietals",
+      "items": [
+        {
+          "name": "Canyon Road Merlot",
+          "details": "Canyon Road · Merlot · 13% ABV",
+          "description": "Smooth and mellow with ripe cherry and a hint of vanilla — the easy-sipping red that goes with everything from burgers to the big game.",
+          "options": [
+            "5 oz"
+          ]
+        },
+        {
+          "name": "Canyon Road Pinot Noir",
+          "details": "Canyon Road · Pinot Noir · 13% ABV",
+          "description": "Light-bodied and silky with red berry flavor and a soft finish. Fancy enough for date night, chill enough for the bar.",
+          "options": [
+            "5 oz"
+          ]
+        },
+        {
+          "name": "Canyon Road Moscato",
+          "details": "Canyon Road · Moscato · 9% ABV",
+          "description": "Sweet, light, and easy with peachy, floral vibes. The crowd-pleaser for folks who like their wine on the sweeter side.",
+          "options": [
+            "5 oz"
+          ]
+        },
+        {
+          "name": "Canyon Road Sauvignon Blanc",
+          "details": "Canyon Road · Sauvignon Blanc · 13% ABV",
+          "description": "Crisp and zesty with citrus and a clean finish — like a palate reset in a glass. Great with apps and lighter fare.",
+          "options": [
+            "5 oz"
+          ]
+        },
+        {
+          "name": "Canyon Road Pinot Grigio",
+          "details": "Canyon Road · Pinot Grigio · 11.5% ABV",
+          "description": "Light, bright, and easy — green apple and citrus with a snappy finish. The no-brainer white for any table.",
+          "options": [
+            "5 oz"
+          ]
+        },
+        {
+          "name": "Graham's 10 Year Tawny Port",
+          "details": "Graham's · Port · 20% ABV",
+          "description": "10-year tawny port; rich fig, caramel and toasted nuts.",
+          "options": [
+            "5 oz"
+          ]
+        },
+        {
+          "name": "Canyon Road Cabernet Sauvignon",
+          "details": "Canyon Road · Cabernet Sauvignon · 13% ABV",
+          "description": "Red wine; rich black cherry, vanilla and soft tannins.",
+          "options": [
+            "5 oz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bourbon",
+      "title": "Bourbon",
+      "subtitle": "Bourbons on our shelf - Some availability limited please check with your server",
+      "items": [
+        {
+          "name": "Buffalo Trace",
+          "details": "Bourbon · 45% ABV"
+        },
+        {
+          "name": "E.H. Taylor Small Batch",
+          "details": "E.H. Taylor · Bourbon · 50% ABV"
+        },
+        {
+          "name": "Maker's Mark",
+          "details": "Bourbon · 45% ABV"
+        },
+        {
+          "name": "Maker's Mark 46",
+          "details": "Maker's Mark · Bourbon · 47% ABV"
+        },
+        {
+          "name": "Jim Beam",
+          "details": "Bourbon · 40% ABV",
+          "description": "Kentucky straight bourbon whiskey; smooth, full-bodied with vanilla and caramel notes.",
+          "options": [
+            "Kentucky Straight Bourbon",
+            "Apple",
+            "Red Stag Black Cherry"
+          ]
+        },
+        {
+          "name": "Jim Beam Black",
+          "details": "Jim Beam · Bourbon · 45% ABV",
+          "description": "Extra-aged Kentucky straight bourbon; richer oak, caramel and warm spice."
+        },
+        {
+          "name": "Wild Turkey 101",
+          "details": "Wild Turkey · Bourbon · 50.5% ABV",
+          "description": "101-proof Kentucky straight bourbon; bold vanilla, caramel and spice."
+        },
+        {
+          "name": "Wild Turkey Rare Breed",
+          "details": "Wild Turkey · Bourbon · 58.4% ABV",
+          "description": "Barrel-proof small batch bourbon; rich, full-flavored. ABV varies by batch."
+        },
+        {
+          "name": "Basil Hayden",
+          "details": "Bourbon · 40% ABV",
+          "description": "Kentucky straight bourbon; light, smooth with gentle spice and honey."
+        },
+        {
+          "name": "Basil Hayden Toast",
+          "details": "Basil Hayden · Bourbon · 40% ABV",
+          "description": "Bourbon finished in toasted barrels; warm oak, sweet caramel, light spice."
+        },
+        {
+          "name": "Michter's US*1",
+          "details": "Michter's · Bourbon · 45.7% ABV",
+          "description": "Small batch Kentucky straight bourbon; rich caramel, vanilla and dried fruit."
+        },
+        {
+          "name": "Penelope Architect",
+          "details": "Penelope Bourbon · Bourbon · 52% ABV",
+          "description": "Straight bourbon finished with French oak staves; layered oak, baking spice, dried fruit."
+        },
+        {
+          "name": "Smoke Wagon Small Batch",
+          "details": "Smoke Wagon · Bourbon · 50% ABV",
+          "description": "Small batch straight bourbon; high-rye spice balanced with caramel and fruit."
+        },
+        {
+          "name": "Driftless Glen Bourbon",
+          "details": "Driftless Glen · Bourbon · 48% ABV",
+          "description": "Wisconsin straight bourbon whiskey; smooth with caramel, vanilla and oak."
+        },
+        {
+          "name": "Woodford Reserve",
+          "details": "Bourbon · 45.2% ABV",
+          "description": "Kentucky straight bourbon; rich dried fruit, vanilla and spice. MVP's barrel pick."
+        },
+        {
+          "name": "Whiskey Acres Bourbon",
+          "details": "Whiskey Acres · Bourbon · 40% ABV",
+          "description": "DeKalb, Illinois farm-crafted bourbon; smooth corn sweetness with oak."
+        }
+      ]
+    },
+    {
+      "id": "bottles-and-cans",
+      "title": "Bottles & Cans",
+      "subtitle": "Bottled and canned beers available",
+      "items": [
+        {
+          "name": "Busch Light",
+          "details": "Anheuser-Busch · Light Lager · 4.1% ABV",
+          "description": "Busch Light is brewed longer to create a lighter body and fewer calories while always delivering that classic taste.",
+          "options": [
+            "16oz Can"
+          ]
+        },
+        {
+          "name": "Coors Light",
+          "details": "Molson Coors · Light Lager · 4.2% ABV",
+          "description": "Coors Light is a crisp, easy-drinking lager that's smooth and refreshing — always a reliable pick for game day at MVP.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Miller Lite",
+          "details": "Molson Coors · Light Lager · 4.2% ABV",
+          "description": "Miller Lite is a smooth, easy-drinking lager with classic beer flavor — a longtime favorite for watching the game.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Modelo",
+          "details": "Pilsner-Style Lager · 4.4% ABV",
+          "description": "Modelo is a smooth, full-flavored lager with a crisp, clean finish that's easy to enjoy.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Miller High Life",
+          "details": "Molson Coors · American Lager · 4.6% ABV",
+          "description": "The Champagne of Beers — crisp, golden, and easy-drinking with a snappy finish. An old-school classic that never goes out of style.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Corona Extra",
+          "details": "Grupo Modelo · Mexican Lager · 4.5% ABV",
+          "description": "The one with the lime. Light, crisp, and ridiculously refreshing — made for game day and good company.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Modelo Negra",
+          "details": "Grupo Modelo · Munich Dunkel · 5.4% ABV",
+          "description": "Dark, smooth, and malty with a touch of caramel — Negra brings the rich flavor without the heaviness. A dark lager done right.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Yuengling Flight",
+          "details": "Yuengling · Light Lager · 4.2% ABV",
+          "description": "Yuengling's Flight — a crisp, refreshing light lager from America's oldest brewery. Easy to enjoy, easy to love.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Michelob Ultra",
+          "details": "Michelob · Light Lager · 4.2% ABV",
+          "description": "Michelob Ultra — the crisp, light lager for the active life. Low carbs, full flavor, and endlessly refreshing.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Bud Light",
+          "details": "Budweiser · Light Lager · 4.2% ABV",
+          "description": "Bud Light — America's favorite light lager. Crisp, clean, and always easy drinking.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Bud Light Lime",
+          "details": "Budweiser · Flavored Light Lager · 4.2% ABV",
+          "description": "Bud Light Lime — the classic Bud Light with a splash of real lime flavor. Crisp, citrusy, and refreshing.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Guinness Draught",
+          "details": "Guinness · Stout · 4.2% ABV",
+          "description": "Guinness Draught — Ireland's iconic stout. Rich, creamy, and smooth with that signature cascading head.",
+          "options": [
+            "14.9oz Can"
+          ]
+        },
+        {
+          "name": "Pacifico",
+          "details": "Mexican Lager · 4.4% ABV",
+          "description": "Crisp, smooth Mexican lager with easygoing flavor. Toss in a lime and it's game-day gold.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Corona Light",
+          "details": "Corona · Light Lager · 4.1% ABV",
+          "description": "The lighter side of the beach classic — same Corona character, fewer calories. Add a lime and kick back.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Heineken",
+          "details": "European Pale Lager · 5% ABV",
+          "description": "The green bottle everybody knows. Crisp, clean Euro lager with a little snap — a no-brainer pick.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Stella Artois",
+          "details": "European Pale Lager · 5% ABV",
+          "description": "Fancy-ish Belgian lager with a smooth, malty finish. A step up from the usual suspects.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Smithwick's",
+          "details": "Irish Red Ale · 4.5% ABV",
+          "description": "Ireland's classic red ale — smooth, malty, and just a little toasty. An easy sipper for the whole game.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Coors Banquet",
+          "details": "Coors · American Lager · 5% ABV",
+          "description": "The original Banquet beer — brewed in Golden, Colorado with Rocky Mountain water since 1873. Crisp, clean, and classically American. When you want a lager's lager, this is it.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Miller Extra Light",
+          "details": "Miller · Light Lager · 2.8% ABV",
+          "description": "The artist formerly known as Miller64 — all the crisp, easy-drinking refreshment at just 2.8% and 64 calories. Maximum chill, minimum everything else.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Pabst Blue Ribbon",
+          "details": "Pabst · American Lager · 4.8% ABV",
+          "description": "An American original. Crisp, no-frills lager in a big 16oz can — the workingman's MVP.",
+          "options": [
+            "16oz Can"
+          ]
+        },
+        {
+          "name": "Corona Premier",
+          "details": "Grupo Modelo · Mexican Lager · 4% ABV",
+          "description": "Light Mexican lager; crisp, smooth and refreshing.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Budweiser",
+          "details": "Light Lager · 5% ABV",
+          "description": "Classic American lager; crisp, clean and refreshing.",
+          "options": [
+            "12oz Bottle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seltzer-and-ready-to-drink",
+      "title": "Seltzer & Ready to Drink",
+      "subtitle": "Seltzers and ready-to-drink cocktails",
+      "items": [
+        {
+          "name": "Carbliss",
+          "details": "Vodka Cocktail · 5% ABV",
+          "description": "Carbliss is a hand-crafted vodka cocktail made with premium vodka and natural fruit flavor. With zero sugar, zero carbs, just 100 calories and no carbonation, it's a smooth, easy-drinking, guilt-free sipper — perfect for game day.",
+          "options": [
+            "Pineapple",
+            "Black Cherry",
+            "Peach",
+            "Lemon Lime",
+            "Blood Orange"
+          ]
+        },
+        {
+          "name": "Long Drink",
+          "details": "The Finnish Long Drink · Sparkling Cocktail · 5.5% ABV",
+          "description": "The Long Drink is Finland's iconic sparkling cocktail, mixing real distilled liquor with crisp, refreshing fruit flavor - a Finnish favorite since 1952. Most flavors are 5.5% ABV; the Strong version packs a bolder 8.5% ABV.",
+          "options": [
+            "Regular",
+            "Sugar Free",
+            "Strong",
+            "Peach",
+            "Pineapple",
+            "Raspberry"
+          ]
+        },
+        {
+          "name": "White Claw",
+          "details": "Hard Seltzer · 5% ABV",
+          "description": "The OG hard seltzer that started the craze — crisp, clean, and easy-drinking with real black cherry flavor. Light, refreshing, and endlessly crushable on game day.",
+          "options": [
+            "Black Cherry"
+          ]
+        },
+        {
+          "name": "Super Lyte",
+          "details": "Stateside Brands · Vodka + Ade · 4.5% ABV",
+          "description": "From the crew behind Surfside — a non-carbonated vodka +ade that drinks like your favorite sports drink, spiked. Zero bubbles, just 90 calories, and easy-sippin' lemon-lime refreshment.",
+          "options": [
+            "Lemon Lime",
+            "Orange",
+            "Fruit Punch"
+          ]
+        },
+        {
+          "name": "High Noon",
+          "details": "Vodka Seltzer · 4.5% ABV",
+          "description": "Real vodka, real juice, sparkling water. The seltzer that actually tastes like something.",
+          "options": [
+            "Pineapple",
+            "Peach",
+            "Lemon",
+            "Grapefruit"
+          ]
+        },
+        {
+          "name": "Mike's Hard Lemonade",
+          "details": "Mike's · Flavored Malt Beverage · 5% ABV",
+          "description": "Sweet, punchy lemonade with a kick. The porch-sipper that never left the party.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Mom Water",
+          "details": "Vodka Water · 4.5% ABV",
+          "description": "Still (not fizzy!) fruit-infused vodka water. Zero carbonation, zero drama, all flavor.",
+          "options": [
+            "Kathy - Blackberry Lime",
+            "Susan - Strawberry Kiwi",
+            "Linda - Blueberry Peach",
+            "Karen - Lemon Blueberry"
+          ]
+        },
+        {
+          "name": "Sun Cruiser",
+          "details": "Iced Tea + Vodka · 4.5% ABV",
+          "description": "Hard iced tea and vodka done the easy-drinking way. The classic Half & Half pours smooth — sweet tea meets lemonade with zero fuss. Tailgate-approved and porch-swing ready.",
+          "options": [
+            "Half & Half"
+          ]
+        },
+        {
+          "name": "Surfside",
+          "details": "Iced Tea / Lemonade + Vodka · 4.5% ABV",
+          "description": "Real vodka, real iced tea, real lemonade — no bubbles, no nonsense. Surfside pours like summer at the beach house: crisp, refreshing, and dangerously easy to drink. Pick a flavor and pretend the sand is under your feet.",
+          "options": [
+            "Raspberry Tea + Vodka",
+            "Strawberry Lemonade + Vodka",
+            "Blueberry Lemonade + Vodka"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "non-alcoholic",
+      "title": "Non-Alcoholic",
+      "subtitle": "Non-alcoholic beers",
+      "items": [
+        {
+          "name": "Busch NA",
+          "details": "Anheuser-Busch · Non-Alcoholic Lager · 0.4% ABV",
+          "description": "All the crisp Busch refreshment with basically none of the alcohol. Same easy-drinking lager taste — designated drivers and early mornings approved.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Heineken 0.0",
+          "details": "Heineken · Non-Alcoholic Lager",
+          "description": "Zero alcohol, all Heineken. Crisp, clean, and brewed with the same A-yeast character — you'd never guess it's 0.0.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "White Claw 0% Black Cherry",
+          "details": "White Claw · Hard Seltzer 0% Alcohol",
+          "description": "All the Black Cherry flavor, zero alcohol. The designated-driver MVP of the cooler.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Seedlip Grove 42",
+          "details": "Seedlip · Non-Alcoholic Spirit",
+          "description": "Non-alcoholic citrus spirit; bright orange, blood orange and ginger."
+        }
+      ]
+    },
+    {
+      "id": "ciders-and-sours",
+      "title": "Ciders and Sours",
+      "items": [
+        {
+          "name": "Blake's Triple Jam",
+          "details": "Blake's Hard Cider Co. · Hard Cider · 6.5% ABV",
+          "description": "A berry-loaded hard cider straight from Blake's Michigan orchard — bursting with strawberries, blackberries, and raspberries. Semi-sweet, gluten-free, and dangerously easy-drinking on a hot game day.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Angry Orchard Crisp Apple",
+          "details": "Angry Orchard · Hard Cider · 5% ABV",
+          "description": "Sweet-tart apple cider that's basically fall in a bottle. Crisp, refreshing, dangerously easy.",
+          "options": [
+            "12oz Bottle"
+          ]
+        },
+        {
+          "name": "Blake's Peach Party",
+          "details": "Blake's Hard Cider Co. · Hard Cider · 6.5% ABV",
+          "description": "A juicy peach cider bash in a can. Sweet, sunny, and ready to party.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Blake's American Apple",
+          "details": "Blake's Hard Cider Co. · Hard Cider · 8% ABV",
+          "description": "Blake's amped-up imperial apple cider. Bold, boozy apple flavor for when one and done is the plan.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Blake's Cider Donut",
+          "details": "Blake's Hard Cider Co. · Hard Cider · 6.5% ABV",
+          "description": "Cinnamon-sugar cider that tastes like the donut shop. Sweet, cozy, and weirdly perfect.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Church Street Cranberry Vanilla Sour",
+          "details": "Church Street Brewing · Fruited Sour · 6.5% ABV",
+          "description": "Tart meets smooth — Church Street's fruited sour loaded with cranberry and a swirl of vanilla. Bright, juicy, and dangerously crushable. Dessert and a sour had a beautiful baby.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Church Street Tangerine Vanilla Sour",
+          "details": "Church Street Brewing · Fruited Sour · 6.5% ABV",
+          "description": "Citrus sunshine with a creamy twist — Church Street's fruited sour bursting with tangerine and mellowed by vanilla. Tart, juicy, and gone before you know it.",
+          "options": [
+            "12oz Can"
+          ]
+        },
+        {
+          "name": "Church Street Blueberry Sour",
+          "details": "Church Street Brewing · Fruited Sour · 6.5% ABV",
+          "description": "Berry-patch tartness in a can — Church Street's fruited sour packed with blueberries. Bright, juicy, and just sour enough to keep you coming back for another sip.",
+          "options": [
+            "12oz Can"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vodka",
+      "title": "Vodka",
+      "items": [
+        {
+          "name": "Blue Ice Huckleberry Vodka",
+          "details": "Blue Ice · 35% ABV",
+          "description": "Idaho potato vodka loaded with wild huckleberry flavor. Smooth, lightly sweet, and made for game-day sipping."
+        },
+        {
+          "name": "Tito's Handmade Vodka",
+          "details": "Tito's · 40% ABV",
+          "description": "America's favorite craft vodka. Corn-based, distilled six times, and smooth enough for anything on the menu."
+        },
+        {
+          "name": "Smirnoff Vodka",
+          "details": "Smirnoff · Vodka · 40% ABV",
+          "description": "The world's best-selling vodka — triple-distilled for a smooth, clean finish. Perfect for shots, mixers, and game-day cocktails. Ask your server about every flavor we carry.",
+          "options": [
+            "Original",
+            "Whipped Cream",
+            "Raspberry",
+            "Green Apple",
+            "Citrus",
+            "Orange",
+            "Vanilla",
+            "Watermelon",
+            "Peach Lemonade",
+            "Blueberry",
+            "Peppermint",
+            "Red, White & Berry",
+            "Blue Raspberry Lemonade",
+            "Pink Lemonade",
+            "Spicy Tamarind",
+            "Cherry",
+            "Kissed Caramel",
+            "Red, White & Merry",
+            "Cucumber & Lime (Zero Sugar)",
+            "Espresso",
+            "Strawberry"
+          ]
+        },
+        {
+          "name": "Ketel One",
+          "details": "Vodka · 40% ABV",
+          "options": [
+            "Ketel One Vodka",
+            "Ketel One Botanical Peach & Orange Blossom",
+            "Ketel One Botanical Cucumber & Mint",
+            "Ketel One Botanical Grapefruit & Rose",
+            "Ketel One Citroen"
+          ]
+        },
+        {
+          "name": "Grey Goose",
+          "details": "Vodka · 40% ABV",
+          "options": [
+            "Grey Goose Vodka",
+            "Essences",
+            "Pear"
+          ]
+        },
+        {
+          "name": "Absolut Vodka",
+          "details": "Absolut · Vodka · 40% ABV",
+          "description": "Swedish vodka; clean, smooth with light grain character."
+        },
+        {
+          "name": "UV Blue",
+          "details": "UV Vodka · Vodka · 30% ABV",
+          "description": "Raspberry flavored vodka; sweet berry, smooth finish."
+        },
+        {
+          "name": "Driftless Glen Vodka",
+          "details": "Driftless Glen · Vodka · 40% ABV",
+          "description": "Wisconsin premium vodka; clean and smooth.",
+          "options": [
+            "Lemon",
+            "Cucumber"
+          ]
+        },
+        {
+          "name": "Windows Continental Vodka",
+          "details": "Windows Distillery · Vodka · 40% ABV",
+          "description": "Sycamore, Illinois craft vodka blended from Brazilian sugar, French wheat and Polish potato vodkas; creamy citrus and vanilla."
+        }
+      ]
+    },
+    {
+      "id": "rum",
+      "title": "Rum",
+      "items": [
+        {
+          "name": "Bacardi Rum",
+          "details": "Bacardi · White Rum · 40% ABV",
+          "description": "The world's most awarded white rum — crisp, clean, and born to mix. From classic daiquiris to game-day rum punches, ask your server about every flavor we carry.",
+          "options": [
+            "Superior",
+            "Limón",
+            "Mango Chile",
+            "Pineapple",
+            "Coconut",
+            "Raspberry",
+            "Dragonberry",
+            "Lime",
+            "Tropical"
+          ]
+        },
+        {
+          "name": "Bacardi Gold",
+          "details": "Bacardi · Gold Rum · 40% ABV",
+          "description": "A smooth, mellow gold rum with warm, rich character — great for rum punches, daiquiris, and game-day cocktails."
+        },
+        {
+          "name": "Bacardi Black",
+          "details": "Bacardi · Black Rum · 40% ABV",
+          "description": "A bold, full-bodied black rum with deep, rich character — made for dark rum cocktails and game-day classics."
+        },
+        {
+          "name": "Malibu",
+          "details": "Coconut Rum · 21% ABV",
+          "options": [
+            "Malibu Coconut Rum"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "whiskey",
+      "title": "Whiskey",
+      "items": [
+        {
+          "name": "Crown Royal",
+          "details": "Canadian Whisky · 40% ABV",
+          "description": "The legendary Canadian whisky behind MVP's loudest cheers — buttery-smooth straight up, unbeatable in a highball, and always ready for game time.",
+          "options": [
+            "Deluxe",
+            "Regal Apple",
+            "Salted Caramel",
+            "Blackberry"
+          ]
+        },
+        {
+          "name": "Jack Daniel's",
+          "details": "Tennessee Whiskey · 40% ABV",
+          "options": [
+            "Old No. 7",
+            "Tennessee Fire",
+            "Tennessee Honey"
+          ]
+        },
+        {
+          "name": "Jameson",
+          "details": "Irish Whiskey · 40% ABV",
+          "options": [
+            "Original",
+            "Orange",
+            "Black Barrel",
+            "Triple Triple"
+          ]
+        },
+        {
+          "name": "Gentleman Jack",
+          "details": "Jack Daniel's · Tennessee Whiskey · 40% ABV",
+          "description": "Twice-mellowed Tennessee whiskey; exceptionally smooth with vanilla and fruit."
+        },
+        {
+          "name": "Jack Daniel's Bonded",
+          "details": "Jack Daniel's · Tennessee Whiskey · 50% ABV",
+          "description": "Bottled-in-bond Tennessee whiskey; bold oak, caramel and spice at 100 proof."
+        },
+        {
+          "name": "Jack Daniel's Single Barrel Select",
+          "details": "Jack Daniel's · Tennessee Whiskey · 47% ABV",
+          "description": "Single barrel Tennessee whiskey; robust toasted oak, vanilla and spice."
+        },
+        {
+          "name": "Seagram's 7 Crown",
+          "details": "Seagram's · Blended Whiskey · 40% ABV",
+          "description": "American blended whiskey; smooth and mellow with light vanilla notes."
+        },
+        {
+          "name": "Skrewball",
+          "details": "Flavored Whiskey · 35% ABV",
+          "description": "Peanut butter whiskey; sweet, nutty and smooth."
+        },
+        {
+          "name": "Sazerac Rye",
+          "details": "Sazerac · Rye Whiskey · 45% ABV",
+          "description": "Kentucky straight rye whiskey; spicy pepper, citrus and caramel."
+        },
+        {
+          "name": "Dewar's White Label",
+          "details": "Dewar's · Scotch Whisky · 40% ABV",
+          "description": "Blended Scotch whisky; smooth honey, heather and light smoke."
+        },
+        {
+          "name": "Johnnie Walker Black Label",
+          "details": "Johnnie Walker · Scotch Whisky · 40% ABV",
+          "description": "12-year blended Scotch whisky; rich smoke, dark fruit and vanilla."
+        },
+        {
+          "name": "Glenfiddich 12",
+          "details": "Glenfiddich · Scotch Whisky · 40% ABV",
+          "description": "12-year single malt Scotch; fresh pear, oak and subtle spice."
+        },
+        {
+          "name": "Bushmills Original",
+          "details": "Bushmills · Irish Whiskey · 40% ABV",
+          "description": "Irish whiskey; smooth honey, vanilla and light fruit."
+        },
+        {
+          "name": "Bushmills Black Bush",
+          "details": "Bushmills · Irish Whiskey · 40% ABV",
+          "description": "Irish whiskey finished in sherry casks; rich dried fruit, malt and nutty sherry."
+        },
+        {
+          "name": "Windows Distillery Four Barrel",
+          "details": "Windows Distillery · Whiskey · 51% ABV",
+          "description": "Sycamore, Illinois craft whiskey finished across four barrels; nuanced stone fruit, vanilla and light oak."
+        },
+        {
+          "name": "Driftless Glen Rye",
+          "details": "Driftless Glen · Rye Whiskey · 48% ABV",
+          "description": "Wisconsin straight rye whiskey; bold spice, caramel and pepper."
+        }
+      ]
+    },
+    {
+      "id": "liqueur",
+      "title": "Liqueur",
+      "items": [
+        {
+          "name": "Kahlua",
+          "details": "Coffee Liqueur · 20% ABV",
+          "description": "The classic coffee liqueur. Rich roasted coffee, rum, and vanilla. The backbone of every great White Russian."
+        },
+        {
+          "name": "Pumpkin Pie Liqueur",
+          "details": "House · Cream Liqueur · 12.5% ABV",
+          "description": "Pumpkin pie in a glass. Creamy pumpkin, cinnamon, and nutmeg. Fall's favorite pour is back."
+        },
+        {
+          "name": "Jeppson's Malört",
+          "details": "Jeppson's · Wormwood Liqueur · 35% ABV",
+          "options": [
+            "Jeppson's Malört"
+          ]
+        },
+        {
+          "name": "Chambord",
+          "details": "Liqueur · 16.5% ABV",
+          "description": "Black raspberry liqueur; rich berry with vanilla and citrus."
+        },
+        {
+          "name": "St-Germain",
+          "details": "Liqueur · 20% ABV",
+          "description": "Elderflower liqueur; delicate floral, pear and citrus."
+        },
+        {
+          "name": "Campari",
+          "details": "Liqueur · 24% ABV",
+          "description": "Italian bitter liqueur; bold bitter orange, cherry and herbs."
+        },
+        {
+          "name": "Disaronno",
+          "details": "Liqueur · 28% ABV",
+          "description": "Italian amaretto; sweet apricot kernel, almond and vanilla."
+        },
+        {
+          "name": "Tribuno Sweet Vermouth",
+          "details": "Tribuno · Vermouth · 16% ABV",
+          "description": "Sweet red vermouth; rich herbs, caramel and warm spice."
+        },
+        {
+          "name": "Di Padrino Rosso",
+          "details": "Di Padrino · Vermouth · 15% ABV",
+          "description": "Rosso vermouth; sweet herbs and warm spice."
+        },
+        {
+          "name": "DeKuyper Triple Sec",
+          "details": "DeKuyper · Liqueur · 24% ABV",
+          "description": "Orange liqueur; sweet citrus, a margarita essential."
+        },
+        {
+          "name": "Pallini Limoncello",
+          "details": "Pallini · Liqueur · 26% ABV",
+          "description": "Italian lemon liqueur; bright, sweet-tart lemon."
+        },
+        {
+          "name": "DeKuyper Peachtree",
+          "details": "DeKuyper · Liqueur · 15% ABV",
+          "description": "Peach schnapps; sweet juicy peach."
+        },
+        {
+          "name": "Mr. Black",
+          "details": "Coffee Liqueur · 25% ABV",
+          "description": "Cold brew coffee liqueur; rich espresso, bittersweet."
+        },
+        {
+          "name": "DeKuyper Blackberry Brandy",
+          "details": "DeKuyper · Brandy · 30% ABV",
+          "description": "Blackberry flavored brandy; sweet dark berry."
+        },
+        {
+          "name": "Licor 43 Chocolate",
+          "details": "Licor 43 · Liqueur · 16% ABV",
+          "description": "Chocolate cream liqueur; cocoa, vanilla and warm spice."
+        }
+      ]
+    },
+    {
+      "id": "gin",
+      "title": "Gin",
+      "items": [
+        {
+          "name": "Bombay Sapphire",
+          "details": "Gin · 47% ABV",
+          "description": "London dry gin; bright juniper, citrus and floral botanicals."
+        },
+        {
+          "name": "Hendrick's Gin",
+          "details": "Hendrick's · Gin · 44% ABV",
+          "description": "Scottish gin; rose and cucumber, smooth and floral."
+        },
+        {
+          "name": "Empress 1908",
+          "details": "Gin · 42.5% ABV",
+          "description": "Indigo gin; butterfly pea flower gives its color; juniper, grapefruit and ginger."
+        },
+        {
+          "name": "Windows Twist Gin",
+          "details": "Windows Distillery · Gin · 40% ABV",
+          "description": "Sycamore, Illinois citrus-forward gin; lemon, lime and orange botanicals."
+        }
+      ]
+    },
+    {
+      "id": "tequila",
+      "title": "Tequila",
+      "items": [
+        {
+          "name": "Casamigos Blanco",
+          "details": "Casamigos · Tequila · 40% ABV",
+          "description": "Blanco tequila, 100% blue agave; crisp citrus and sweet agave."
+        },
+        {
+          "name": "Casamigos Reposado",
+          "details": "Casamigos · Tequila · 40% ABV",
+          "description": "Reposado tequila, 100% blue agave rested in oak; smooth caramel, vanilla and spice."
+        },
+        {
+          "name": "Adictivo Anejo",
+          "details": "Adictivo · Tequila · 40% ABV",
+          "description": "Anejo tequila, 100% blue agave aged two years in French oak; rich oak, vanilla and dried fruit."
+        },
+        {
+          "name": "1800 Silver",
+          "details": "1800 · Tequila · 40% ABV",
+          "description": "Blanco tequila, 100% blue agave; smooth with sweet agave and pepper."
+        }
+      ]
+    },
+    {
+      "id": "soft-drinks",
+      "title": "Soft Drinks",
+      "items": [
+        {
+          "name": "Coke"
+        },
+        {
+          "name": "Diet Coke"
+        },
+        {
+          "name": "Sprite"
+        },
+        {
+          "name": "Mr. Pibb"
+        },
+        {
+          "name": "Ginger Ale"
+        },
+        {
+          "name": "Lemonade"
+        },
+        {
+          "name": "Unsweetened Iced Tea"
+        },
+        {
+          "name": "Cranberry Juice"
+        },
+        {
+          "name": "Orange Juice"
+        },
+        {
+          "name": "Pineapple Juice"
+        }
+      ]
+    }
+  ]
 }

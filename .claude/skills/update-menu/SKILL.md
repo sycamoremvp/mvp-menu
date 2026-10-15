@@ -17,6 +17,8 @@ If any of these is obvious from Chris's message, don't ask again.
 
 ## 2. Read the source carefully
 
+- For drinks, the source may be the Sippo page (https://app.sippo.io/m/8xPbVv). Its page text contains every drink; read it directly rather than from screenshots.
+
 - Read every page of the PDF or image. Capture section titles, subtitles, notes, item names, descriptions, prices, sizes, and add-ons.
 - Keep the restaurant's wording and punctuation as printed. Don't "fix" style.
 - Do fix obvious spelling mistakes (Chris approved this), and list every fix for Chris.
