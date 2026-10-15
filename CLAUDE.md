@@ -21,7 +21,7 @@ The app downloads these files when it opens, so menu changes go live without a n
 
 - `menu.json`: the regular food menu.
 - `seasonal.json`: the seasonal features menu (changes up to 4 times a year). Shown as its own menu in the app. Replaced wholesale each season; can be empty between seasons.
-- `drinks.json`: the drink list (beverages are never sold online; this is display only).
+- `drinks.json`: the drink list (beverages are never sold online; this is display only). First imported from Sippo (https://app.sippo.io/m/8xPbVv) on 2026-10-15.
 - `hours.json`: opening hours for each area (Sports Bar & Patio, Rooftop). Hours are seasonal.
 - `scripts/validate.mjs`: the automatic check. Run `node scripts/validate.mjs` before every pull request.
 - `.claude/skills/update-menu/`: step-by-step process for updating the menu from a PDF, photo, or written instructions.
@@ -51,6 +51,7 @@ The POS (Shift4 / SkyTab) is the source of truth for items and prices. These fil
           "price": 17,                     // plain number, no $ sign or quotes
           "description": "Choice of Protein, Bacon, ...",  // optional
           "details": "IPA · 6.5% ABV",     // optional short line, mainly for drinks
+          "options": ["Peach", "Lemon"],   // optional flavors or sizes with no price difference
           "featured": true,                // optional, shows a "Fan Favorite" badge
           "new": true,                     // optional, shows a "New" badge
           "addOns": [{ "name": "Guacamole", "price": 3 }]  // optional
@@ -66,7 +67,7 @@ The POS (Shift4 / SkyTab) is the source of truth for items and prices. These fil
 }
 ```
 
-- Each item has either `price` or `sizes`, never both. `sizes` covers any choice that changes the price (sizes, proteins, basket vs side).
+- Each item has either `price` or `sizes`, never both. In `drinks.json` only, both may be left out (most drinks don't list a price). `sizes` covers any choice that changes the price (sizes, proteins, basket vs side).
 - A price of `0` means "included" (for example, a side that comes with a meal).
 - Comments above are explanation only; real JSON files can't contain comments.
 
