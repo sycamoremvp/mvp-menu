@@ -140,33 +140,24 @@
           "name": "Busch Light",
           "details": "Anheuser-Busch · Light Lager · 4.1% ABV",
           "description": "Busch Light is brewed longer to create a lighter body and fewer calories while always delivering that classic taste.",
-          "sizes": [
-            {
-              "name": "16oz",
-              "price": 4
-            }
+          "options": [
+            "16oz"
           ]
         },
         {
           "name": "Coors Light",
           "details": "Molson Coors · Pilsner · 4.2% ABV",
           "description": "Coors Light is a crisp, clean, American-style light lager with 4.2% ABV and 102 calories per 12 oz serving. Brewed by Molson Coors, it is famous for its \"World's Most Refreshing\" cold-lagered brewing process",
-          "sizes": [
-            {
-              "name": "16oz",
-              "price": 4
-            }
+          "options": [
+            "16oz"
           ]
         },
         {
           "name": "Miller Lite",
           "details": "Molson Coors · Pilsner / Light Lager · 4.2% ABV",
           "description": "Crafted as an American-style pilsner, it offers a light-to-medium body with a hop-forward flavor, subtle pale and crystal malt character, and a crisp, clean finish.",
-          "sizes": [
-            {
-              "name": "16oz",
-              "price": 4
-            }
+          "options": [
+            "16oz"
           ]
         },
         {
