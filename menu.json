@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "menuName": "Fall & Winter 2026",
+  "updated": "2026-10-15",
+  "sections": [
+    {
+      "id": "warmups",
+      "title": "Warmups",
+      "items": [
+        {
+          "name": "Chips and Salsa",
+          "price": 6,
+          "description": "Home-made Tortilla Chips, House Fire Roasted Salsa",
+          "addOns": [
+            { "name": "Guacamole", "price": 3 },
+            { "name": "Hatch Chili Queso | Beer Cheese", "price": 2 }
+          ]
+        },
+        {
+          "name": "MVP Eggrolls",
+          "price": 13,
+          "description": "Home-made, Freshly Wrapped Eggrolls. Ask your server what we have today!",
+          "featured": true
+        },
+        {
+          "name": "Buffalo Cauliflower",
+          "price": 8,
+          "description": "Cauliflower Florets Breaded, Fried, Tossed in Buffalo | Ranch"
+        },
+        {
+          "name": "Garlic Cheese Curds",
+          "price": 10,
+          "description": "Fried Golden Brown | Ranch"
+        },
+        {
+          "name": "Whiskey Onion Rings",
+          "price": 12,
+          "description": "1 Pound of 1/2\" Thick Rings, Battered with a Sweet Finish | Ranch"
+        },
+        {
+          "name": "Pretzel Bites",
+          "price": 13,
+          "description": "Bite Sized Pretzels, Beer Cheese & Stone Ground Mustard"
+        }
+      ]
+    },
+    {
+      "id": "hall-of-fame",
+      "title": "MVP Hall of Fame",
+      "shortTitle": "Hall of Fame",
+      "subtitle": "Our all time customer favorites",
+      "items": [
+        {
+          "name": "The Cowboy",
+          "price": 15,
+          "description": "Choice of Protein, Bacon, Cheddar, Kansas City BBQ"
+        },
+        {
+          "name": "The Boss",
+          "price": 17,
+          "description": "Choice of Protein, Bacon, Carnitas, Cheddar, Onion Crisps, Kansas City BBQ"
+        },
+        {
+          "name": "California Street",
+          "price": 17,
+          "description": "Choice of Protein, Bacon, Pepperjack, Guacamole"
+        },
+        {
+          "name": "Buffalo Chx Wrap",
+          "price": 14,
+          "description": "Chicken Tossed in Buffalo, Mixed Greens, Tomato, Onion, Bleu Cheese Crumble, Ranch"
+        },
+        {
+          "name": "Veggie Wrap",
+          "price": 14,
+          "description": "Mixed Greens, Tomato, Red Onion, Cucumber, Green Pepper, Mozzarella, Caramelized Onion, Garlic Hummus, Balsamic"
+        }
+      ]
+    },
+    {
+      "id": "wings",
+      "title": "Fly the Wings",
+      "subtitle": "Large, hand breaded, made to order",
+      "items": [
+        {
+          "name": "Traditional",
+          "price": 10,
+          "description": "Served in multiples of 6 only w/Celery & Ranch | Bleu Cheese"
+        },
+        {
+          "name": "Boneless",
+          "price": 9,
+          "description": "Sauces: Buffalo, Kansas City BBQ, Soy Sweet Chili, Honey Sriracha, Parmesan Garlic"
+        },
+        {
+          "name": "Extra Celery, Sauces, Rubs, Dips",
+          "price": 1,
+          "description": "Rubs: Creole, Lemon Pepper, Nashville Hot"
+        }
+      ]
+    },
+    {
+      "id": "field-of-greens",
+      "title": "Field of Greens",
+      "items": [
+        {
+          "name": "MVP Salad",
+          "price": 11,
+          "description": "Mixed Greens, Cucumber, Tomato, Onion, Green Pepper, Cheddar, Crouton",
+          "addOns": [
+            { "name": "Chicken", "price": 4 },
+            { "name": "Shrimp or Steak", "price": 5 }
+          ]
+        },
+        {
+          "name": "Taco Salad",
+          "price": 12,
+          "description": "Tortilla Bowl, Refried Beans, Rice, Lettuce, Tomato, Red Onion, Cheddar"
+        },
+        {
+          "name": "Ty Cobb",
+          "price": 15,
+          "description": "Mixed Greens, Bacon, Strawberry, Bleu Cheese Crumbles, Avocado, Blueberry, Bourbon Candied Pecans",
+          "featured": true
+        }
+      ]
+    }
+  ]
+}
