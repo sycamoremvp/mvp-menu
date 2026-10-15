@@ -21,7 +21,9 @@ The app downloads these files when it opens, so menu changes go live without a n
 
 - `menu.json`: the regular food menu.
 - `seasonal.json`: the seasonal features menu (changes up to 4 times a year). Shown as its own menu in the app. Replaced wholesale each season; can be empty between seasons.
-- `drinks.json`: the drink list (beverages are never sold online; this is display only). First imported from Sippo (https://app.sippo.io/m/8xPbVv) on 2026-10-15.
+- `drinks.json`: the drink list (beverages are never sold online; this is display only; no prices). **Sippo (https://app.sippo.io/m/8xPbVv) is the source.** Staff edit drinks in Sippo, and `scripts/import-sippo.mjs` rebuilds this file from it. Don't hand-edit Sippo drinks here; the next sync would undo it.
+- `scripts/import-sippo.mjs`: the Sippo import. Its settings at the top list the sections kept from this file (soft drinks, which Sippo doesn't have) and fixes for names Sippo cuts off at 30 characters.
+- `.github/workflows/sync-sippo.yml`: runs the import daily at 11am Central. If drinks changed and the check passes, it submits and merges the change automatically (Chris approved this for drinks only). It stops for Chris's review if the check fails or more than 30% of drinks would disappear.
 - `hours.json`: opening hours for each area (Sports Bar & Patio, Rooftop). Hours are seasonal.
 - `scripts/validate.mjs`: the automatic check. Run `node scripts/validate.mjs` before every pull request.
 - `.claude/skills/update-menu/`: step-by-step process for updating the menu from a PDF, photo, or written instructions.
