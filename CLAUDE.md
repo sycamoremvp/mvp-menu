@@ -85,7 +85,7 @@ The POS (Shift4 / SkyTab) is the source of truth for items and prices. These fil
       "season": { "start": "2026-05-25", "end": "2026-10-31" },  // optional; outside these dates the area shows as closed for the season
       "note": "Closed on inclement weather days",  // optional
       "hours": [
-        { "days": ["mon", "tue"], "open": "16:00", "close": "00:00" },  // 24-hour times; close is optional
+        { "days": ["mon", "tue"], "open": "16:00" },  // 24-hour times; no "close" shows as "4pm - Close"
         { "days": ["fri", "sat", "sun"], "label": "Open all day" }       // label when there's no set time
       ]
     }
@@ -94,6 +94,8 @@ The POS (Shift4 / SkyTab) is the source of truth for items and prices. These fil
 ```
 
 - Days not listed are closed. Each day appears at most once per area.
+- Leave out `close` when closing time varies; the app shows it as "4pm - Close".
+- Same-day closures (like weather) are not tracked here; the `note` covers them in general terms.
 - The rooftop's `season` dates need updating each spring (Memorial Day moves every year).
 - A closing time earlier than the opening time means after midnight (for example, open 11:00, close 02:00).
 
